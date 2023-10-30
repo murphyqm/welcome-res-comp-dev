@@ -1,7 +1,7 @@
 # gitignore for template-jb-docs
 
 # built book
-**/_build/*
+# **/_build/*
 
 # vagrant stuff
 **/.vagrant/*

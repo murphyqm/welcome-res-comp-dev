@@ -1,0 +1,916 @@
+
+
+<!DOCTYPE html>
+
+
+<html lang="en" >
+
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.18.1: http://docutils.sourceforge.net/" />
+
+    <title>Code and Software &#8212; Template documentation jupyter book</title>
+  
+  
+  
+  <script data-cfasync="false">
+    document.documentElement.dataset.mode = localStorage.getItem("mode") || "";
+    document.documentElement.dataset.theme = localStorage.getItem("theme") || "light";
+  </script>
+  
+  <!-- Loaded before other Sphinx assets -->
+  <link href="../_static/styles/theme.css?digest=c5ced968eda925caa686" rel="stylesheet" />
+<link href="../_static/styles/bootstrap.css?digest=c5ced968eda925caa686" rel="stylesheet" />
+<link href="../_static/styles/pydata-sphinx-theme.css?digest=c5ced968eda925caa686" rel="stylesheet" />
+
+  
+  <link href="../_static/vendor/fontawesome/6.1.2/css/all.min.css?digest=c5ced968eda925caa686" rel="stylesheet" />
+  <link rel="preload" as="font" type="font/woff2" crossorigin href="../_static/vendor/fontawesome/6.1.2/webfonts/fa-solid-900.woff2" />
+<link rel="preload" as="font" type="font/woff2" crossorigin href="../_static/vendor/fontawesome/6.1.2/webfonts/fa-brands-400.woff2" />
+<link rel="preload" as="font" type="font/woff2" crossorigin href="../_static/vendor/fontawesome/6.1.2/webfonts/fa-regular-400.woff2" />
+
+    <link rel="stylesheet" type="text/css" href="../_static/pygments.css" />
+    <link rel="stylesheet" href="../_static/styles/sphinx-book-theme.css?digest=14f4ca6b54d191a8c7657f6c759bf11a5fb86285" type="text/css" />
+    <link rel="stylesheet" type="text/css" href="../_static/togglebutton.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/copybutton.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/mystnb.4510f1fc1dee50b3e5859aac5469c37c29e427902b24a333a5f9fcb2f0b3ac41.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/sphinx-thebe.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/design-style.4045f2051d55cab465a707391d5b2007.min.css" />
+  
+  <!-- Pre-loaded scripts that we'll load fully later -->
+  <link rel="preload" as="script" href="../_static/scripts/bootstrap.js?digest=c5ced968eda925caa686" />
+<link rel="preload" as="script" href="../_static/scripts/pydata-sphinx-theme.js?digest=c5ced968eda925caa686" />
+  <script src="../_static/vendor/fontawesome/6.1.2/js/all.min.js?digest=c5ced968eda925caa686"></script>
+
+    <script data-url_root="../" id="documentation_options" src="../_static/documentation_options.js"></script>
+    <script src="../_static/jquery.js"></script>
+    <script src="../_static/underscore.js"></script>
+    <script src="../_static/_sphinx_javascript_frameworks_compat.js"></script>
+    <script src="../_static/doctools.js"></script>
+    <script src="../_static/clipboard.min.js"></script>
+    <script src="../_static/copybutton.js"></script>
+    <script src="../_static/scripts/sphinx-book-theme.js?digest=5a5c038af52cf7bc1a1ec88eea08e6366ee68824"></script>
+    <script>let toggleHintShow = 'Click to show';</script>
+    <script>let toggleHintHide = 'Click to hide';</script>
+    <script>let toggleOpenOnPrint = 'true';</script>
+    <script src="../_static/togglebutton.js"></script>
+    <script>var togglebuttonSelector = '.toggle, .admonition.dropdown';</script>
+    <script src="../_static/design-tabs.js"></script>
+    <script>const THEBE_JS_URL = "https://unpkg.com/thebe@0.8.2/lib/index.js"
+const thebe_selector = ".thebe,.cell"
+const thebe_selector_input = "pre"
+const thebe_selector_output = ".output, .cell_output"
+</script>
+    <script async="async" src="../_static/sphinx-thebe.js"></script>
+    <script>DOCUMENTATION_OPTIONS.pagename = 'example_section/03-software';</script>
+    <link rel="canonical" href="https://arctraining.github.io/template-jb-docs/example_section/03-software.html" />
+    <link rel="shortcut icon" href="../_static/favicon-32x32.png"/>
+    <link rel="index" title="Index" href="../genindex.html" />
+    <link rel="search" title="Search" href="../search.html" />
+  <meta name="viewport" content="width=device-width, initial-scale=1"/>
+  <meta name="docsearch:language" content="en"/>
+  </head>
+  
+  
+  <body data-bs-spy="scroll" data-bs-target=".bd-toc-nav" data-offset="180" data-bs-root-margin="0px 0px -60%" data-default-mode="">
+
+  
+  
+  <a class="skip-link" href="#main-content">Skip to main content</a>
+  
+  <div id="pst-scroll-pixel-helper"></div>
+
+  
+  <button type="button" class="btn rounded-pill" id="pst-back-to-top">
+    <i class="fa-solid fa-arrow-up"></i>
+    Back to top
+  </button>
+
+  
+  <input type="checkbox"
+          class="sidebar-toggle"
+          name="__primary"
+          id="__primary"/>
+  <label class="overlay overlay-primary" for="__primary"></label>
+  
+  <input type="checkbox"
+          class="sidebar-toggle"
+          name="__secondary"
+          id="__secondary"/>
+  <label class="overlay overlay-secondary" for="__secondary"></label>
+  
+  <div class="search-button__wrapper">
+    <div class="search-button__overlay"></div>
+    <div class="search-button__search-container">
+<form class="bd-search d-flex align-items-center"
+      action="../search.html"
+      method="get">
+  <i class="fa-solid fa-magnifying-glass"></i>
+  <input type="search"
+         class="form-control"
+         name="q"
+         id="search-input"
+         placeholder="Search this book..."
+         aria-label="Search this book..."
+         autocomplete="off"
+         autocorrect="off"
+         autocapitalize="off"
+         spellcheck="false"/>
+  <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd>K</kbd></span>
+</form></div>
+  </div>
+  
+    <nav class="bd-header navbar navbar-expand-lg bd-navbar">
+    </nav>
+  
+  <div class="bd-container">
+    <div class="bd-container__inner bd-page-width">
+      
+      <div class="bd-sidebar-primary bd-sidebar">
+        
+
+  
+  <div class="sidebar-header-items sidebar-primary__section">
+    
+    
+    
+    
+  </div>
+  
+    <div class="sidebar-primary-items__start sidebar-primary__section">
+        <div class="sidebar-primary-item">
+  
+
+<a class="navbar-brand logo" href="../welcome.html">
+  
+  
+  
+  
+  
+    
+    
+      
+    
+    
+    <img src="../_static/logo.png" class="logo__image only-light" alt="Template documentation jupyter book - Home"/>
+    <script>document.write(`<img src="../_static/logo.png" class="logo__image only-dark" alt="Template documentation jupyter book - Home"/>`);</script>
+  
+  
+</a></div>
+        <div class="sidebar-primary-item"><nav class="bd-links" id="bd-docs-nav" aria-label="Main">
+    <div class="bd-toc-item navbar-nav active">
+        
+        <ul class="nav bd-sidenav bd-sidenav__home-link">
+            <li class="toctree-l1">
+                <a class="reference internal" href="../welcome.html">
+                    Welcome
+                </a>
+            </li>
+        </ul>
+        <ul class="nav bd-sidenav">
+<li class="toctree-l1 has-children"><a class="reference internal" href="start.html">Example section</a><input class="toctree-checkbox" id="toctree-checkbox-1" name="toctree-checkbox-1" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-1"><i class="fa-solid fa-chevron-down"></i></label><ul>
+<li class="toctree-l2"><a class="reference internal" href="01-introduction.html">Introduction</a></li>
+<li class="toctree-l2"><a class="reference internal" href="02-data_management.html">Data Management</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference external" href="https://arc.leeds.ac.uk">Research Computing Website</a></li>
+</ul>
+
+    </div>
+</nav></div>
+    </div>
+  
+  
+  <div class="sidebar-primary-items__end sidebar-primary__section">
+  </div>
+  
+  <div id="rtd-footer-container"></div>
+
+
+      </div>
+      
+      <main id="main-content" class="bd-main">
+        
+        
+
+<div class="sbt-scroll-pixel-helper"></div>
+
+          <div class="bd-content">
+            <div class="bd-article-container">
+              
+              <div class="bd-header-article">
+<div class="header-article-items header-article__inner">
+  
+    <div class="header-article-items__start">
+      
+        <div class="header-article-item"><label class="sidebar-toggle primary-toggle btn btn-sm" for="__primary" title="Toggle primary sidebar" data-bs-placement="bottom" data-bs-toggle="tooltip">
+  <span class="fa-solid fa-bars"></span>
+</label></div>
+      
+    </div>
+  
+  
+    <div class="header-article-items__end">
+      
+        <div class="header-article-item">
+
+<div class="article-header-buttons">
+
+
+
+
+
+<div class="dropdown dropdown-source-buttons">
+  <button class="btn dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false" aria-label="Source repositories">
+    <i class="fab fa-github"></i>
+  </button>
+  <ul class="dropdown-menu">
+      
+      
+      
+      <li><a href="https://github.com/ARCTraining/template-jb-docs" target="_blank"
+   class="btn btn-sm btn-source-repository-button dropdown-item"
+   title="Source repository"
+   data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fab fa-github"></i>
+  </span>
+<span class="btn__text-container">Repository</span>
+</a>
+</li>
+      
+      
+      
+      
+      <li><a href="https://github.com/ARCTraining/template-jb-docs/edit/gh-pages/book/example_section/03-software.md" target="_blank"
+   class="btn btn-sm btn-source-edit-button dropdown-item"
+   title="Suggest edit"
+   data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-pencil-alt"></i>
+  </span>
+<span class="btn__text-container">Suggest edit</span>
+</a>
+</li>
+      
+      
+      
+      
+      <li><a href="https://github.com/ARCTraining/template-jb-docs/issues/new?title=Issue%20on%20page%20%2Fexample_section/03-software.html&body=Your%20issue%20content%20here." target="_blank"
+   class="btn btn-sm btn-source-issues-button dropdown-item"
+   title="Open an issue"
+   data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-lightbulb"></i>
+  </span>
+<span class="btn__text-container">Open issue</span>
+</a>
+</li>
+      
+  </ul>
+</div>
+
+
+
+
+
+
+<div class="dropdown dropdown-download-buttons">
+  <button class="btn dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false" aria-label="Download this page">
+    <i class="fas fa-download"></i>
+  </button>
+  <ul class="dropdown-menu">
+      
+      
+      
+      <li><a href="../_sources/example_section/03-software.md" target="_blank"
+   class="btn btn-sm btn-download-source-button dropdown-item"
+   title="Download source file"
+   data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-file"></i>
+  </span>
+<span class="btn__text-container">.md</span>
+</a>
+</li>
+      
+      
+      
+      
+      <li>
+<button onclick="window.print()"
+  class="btn btn-sm btn-download-pdf-button dropdown-item"
+  title="Print to PDF"
+  data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-file-pdf"></i>
+  </span>
+<span class="btn__text-container">.pdf</span>
+</button>
+</li>
+      
+  </ul>
+</div>
+
+
+
+
+<button onclick="toggleFullScreen()"
+  class="btn btn-sm btn-fullscreen-button"
+  title="Fullscreen mode"
+  data-bs-placement="bottom" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-expand"></i>
+  </span>
+
+</button>
+
+
+<script>
+document.write(`
+  <button class="btn btn-sm navbar-btn theme-switch-button" title="light/dark" aria-label="light/dark" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <span class="theme-switch nav-link" data-mode="light"><i class="fa-solid fa-sun fa-lg"></i></span>
+    <span class="theme-switch nav-link" data-mode="dark"><i class="fa-solid fa-moon fa-lg"></i></span>
+    <span class="theme-switch nav-link" data-mode="auto"><i class="fa-solid fa-circle-half-stroke fa-lg"></i></span>
+  </button>
+`);
+</script>
+
+<script>
+document.write(`
+  <button class="btn btn-sm navbar-btn search-button search-button__button" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <i class="fa-solid fa-magnifying-glass fa-lg"></i>
+  </button>
+`);
+</script>
+<label class="sidebar-toggle secondary-toggle btn btn-sm" for="__secondary"title="Toggle secondary sidebar" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <span class="fa-solid fa-list"></span>
+</label>
+</div></div>
+      
+    </div>
+  
+</div>
+</div>
+              
+              
+
+<div id="jb-print-docs-body" class="onlyprint">
+    <h1>Code and Software</h1>
+    <!-- Table of contents -->
+    <div id="print-main-content">
+        <div id="jb-print-toc">
+            
+            <div>
+                <h2> Contents </h2>
+            </div>
+            <nav aria-label="Page">
+                <ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#what-your-future-self-may-think">What your future self may think…</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#what-is-research-code-and-software">What is research code and software?</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#place-a-brief-explanatory-comment-at-the-start-of-every-script-or-program">Place a brief explanatory comment at the start of every script or program</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#decompose-programs-into-functions">Decompose programs into functions</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#be-ruthless-about-eliminating-duplication">Be ruthless about eliminating duplication</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#give-functions-and-variables-meaningful-names">Give functions and variables meaningful names</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#make-dependencies-and-requirements-explicit">Make dependencies and requirements explicit.</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#do-not-comment-and-uncomment-sections-of-code-to-control-a-program-s-behavior">Do not comment and uncomment sections of code to control a program’s behavior</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#provide-a-simple-example-or-test-data-set">Provide a simple example or test data set</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#code-can-be-managed-like-data">Code can be managed like data</a></li>
+</ul>
+            </nav>
+        </div>
+    </div>
+</div>
+
+              
+                
+<div id="searchbox"></div>
+                <article class="bd-article" role="main">
+                  
+  <section class="tex2jax_ignore mathjax_ignore" id="code-and-software">
+<h1>Code and Software<a class="headerlink" href="#code-and-software" title="Permalink to this heading">#</a></h1>
+<div class="highlight-objectives notranslate"><div class="highlight"><pre><span></span>
+- Describe what is research software and its purposes
+- Decompose a workflow into identifiable components
+- Know when to separate a script into several functions
+- Write code that is easy to run by others by including all dependencies, requirements, documentation, and examples
+
+</pre></div>
+</div>
+<div class="highlight-questions notranslate"><div class="highlight"><pre><span></span>
+- What is research code and software?
+- What can you do to make code usable and reusable?
+- What are the characteristics of readable code?
+
+</pre></div>
+</div>
+<section id="what-your-future-self-may-think">
+<h2>What your future self may think…<a class="headerlink" href="#what-your-future-self-may-think" title="Permalink to this heading">#</a></h2>
+<p><img alt="" src="../_images/ew-software-twit.png" />{alt=”A tweet from Neil Ferguson, posted on March 22nd 2020. It reads ‘I’m conscious that lots of people would like to see and run the pandemic simulation code we are using to model control measures against COVID-19. To explain the background — I wrote the code (thousands of lines on undocumented C) 13 plus years ago to model flu pandemics…’”}</p>
+<p>The <a class="reference external" href="https://twitter.com/neil_ferguson/status/1241835454707699713">twitter thread illustrates a real example of research software problems</a>,
+from <a class="reference external" href="https://en.wikipedia.org/wiki/Neil_Ferguson_(epidemiologist)">Prof. Neil Ferguson</a>.
+In that case,  the research software written for one purpose was suddenly in high demand, for important public health reasons, over a decade later.
+And that software was hard for others to use.</p>
+<p>Smaller-scale versions of this problem are more common:</p>
+<ul class="simple">
+<li><p>you want to re-run a data analysis that you did six months ago</p></li>
+<li><p>a new post-doc starts working on a related project and needs to adapt your analysis to a new dataset</p></li>
+<li><p>you publish a paper, and a masters student from the other side of the world emails you to reproduce the results for their project</p></li>
+</ul>
+</section>
+<section id="what-is-research-code-and-software">
+<h2>What is research code and software?<a class="headerlink" href="#what-is-research-code-and-software" title="Permalink to this heading">#</a></h2>
+<p>There are many different shapes and sizes of research software:</p>
+<ul class="simple">
+<li><p>Any code that runs in order to process your research data.</p></li>
+<li><p>A record of all the steps used to process your data (scripts and workflow such data analysis are software).</p></li>
+<li><p><a class="reference external" href="https://en.wikipedia.org/wiki/R_(programming_language)">R</a>, <a class="reference external" href="https://www.python.org">Python</a>, <a class="reference external" href="https://www.mathworks.com/products/matlab.html">MATLAB</a>, <a class="reference external" href="https://en.wikipedia.org/wiki/Unix_shell">unix shell</a>, <a class="reference external" href="https://openrefine.org">OpenRefine</a>, <a class="reference external" href="https://imagej.net/software/imagej/">ImageJ</a>, etc. are all scriptable. So are <a class="reference external" href="https://support.microsoft.com/en-au/office/quick-start-create-a-macro-741130ca-080d-49f5-9471-1e5fb3d581a8">Microsoft Excel macros</a>.</p></li>
+<li><p>Standalone programs or scripts that do particular research tasks are also research software.</p></li>
+</ul>
+<p>There are extended discussions about research software at the <a class="reference external" href="https://www.software.ac.uk/about">Software Sustainability Institute</a>.</p>
+<div class="highlight-challenge notranslate"><div class="highlight"><pre><span></span>
+## Potential problems writing code
+
+**Discussion**
+
+What can go wrong with writing research code?
+
+:::::::::::::::  solution
+
+## Suggestions
+
+- I don&#39;t remember what this code does
+- I don&#39;t remember why I made this choice
+- This code doesn&#39;t work any more
+- This code doesn&#39;t work on an updated version of my dataset
+- This code doesn&#39;t work on a different computing system
+- I&#39;m not sure if this calculation is correct
+  
+  
+
+:::::::::::::::::::::::::
+
+</pre></div>
+</div>
+<p>If you or your group are creating ten thousands lines of code
+for use by hundreds of people you have never met, you are doing software
+engineering. If you’re writing a few dozen lines now and again, and are
+probably going to be its only user, you may not be doing engineering,
+but you can still make things easier on yourself by adopting a few key
+engineering practices. What’s more, adopting these practices will make
+it easier for other people and your future self to understand and (re)use
+your code.</p>
+<p>The core realization in these practices is that <em>readable</em>, <em>reusable</em>,
+and <em>testable</em> are all side effects of writing <em>modular</em> code, i.e., of
+building programs out of short, single-purpose functions with
+clearly-defined inputs and outputs
+[<a class="reference external" href="https://scholar.google.com/scholar_lookup?title=The+Pragmatic+Programmer&amp;author=A+Hunt&amp;author=D+Thomas&amp;publication_year=1999">hunt1999</a>].
+Much has been written on
+this <a class="reference external" href="https://medium.com/hackernoon/how-to-decompose-a-system-into-modules-796bd941f036">topic</a>,
+and this section focuses on practices that best
+balance ease of use with benefit for you and collaborators.</p>
+<p>Programs themselves are modular, and can be written in scripts that run
+a clearly-defined set of functions on defined inputs.</p>
+</section>
+<section id="place-a-brief-explanatory-comment-at-the-start-of-every-script-or-program">
+<h2>Place a brief explanatory comment at the start of every script or program<a class="headerlink" href="#place-a-brief-explanatory-comment-at-the-start-of-every-script-or-program" title="Permalink to this heading">#</a></h2>
+<p>Short is fine; always include at least one example of how
+the program is used. Remember, a good example is worth a thousand
+words. Where possible, the comment should also indicate reasonable
+values for parameters like in this example.</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>    <span class="n">Synthesize</span> <span class="n">image</span> <span class="n">files</span> <span class="k">for</span> <span class="n">testing</span> <span class="n">circularity</span> <span class="n">estimation</span> <span class="n">algorithm</span><span class="o">.</span>
+
+    <span class="n">Usage</span><span class="p">:</span> <span class="n">make_images</span><span class="o">.</span><span class="n">py</span> <span class="o">-</span><span class="n">f</span> <span class="n">fuzzing</span> <span class="o">-</span><span class="n">n</span> <span class="n">flaws</span> <span class="o">-</span><span class="n">o</span> <span class="n">output</span> <span class="o">-</span><span class="n">s</span> <span class="n">seed</span> <span class="o">-</span><span class="n">v</span> <span class="o">-</span><span class="n">w</span> <span class="n">size</span>
+
+    <span class="n">where</span><span class="p">:</span>
+    <span class="o">-</span><span class="n">f</span> <span class="n">fuzzing</span> <span class="o">=</span> <span class="n">fuzzing</span> <span class="nb">range</span> <span class="n">of</span> <span class="n">blobs</span> <span class="p">(</span><span class="n">typically</span> <span class="mf">0.0</span><span class="o">-</span><span class="mf">0.2</span><span class="p">)</span>
+    <span class="o">-</span><span class="n">n</span> <span class="n">flaws</span>   <span class="o">=</span> <span class="n">p</span><span class="p">(</span><span class="n">success</span><span class="p">)</span> <span class="k">for</span> <span class="n">geometric</span> <span class="n">distribution</span> <span class="n">of</span> <span class="c1"># flaws/sample (e.g. 0.5-0.8)</span>
+    <span class="o">-</span><span class="n">o</span> <span class="n">output</span>  <span class="o">=</span> <span class="n">name</span> <span class="n">of</span> <span class="n">output</span> <span class="n">file</span>
+    <span class="o">-</span><span class="n">s</span> <span class="n">seed</span>    <span class="o">=</span> <span class="n">random</span> <span class="n">number</span> <span class="n">generator</span> <span class="n">seed</span> <span class="p">(</span><span class="n">large</span> <span class="n">integer</span><span class="p">)</span>
+    <span class="o">-</span><span class="n">v</span>         <span class="o">=</span> <span class="n">verbose</span>
+    <span class="o">-</span><span class="n">w</span> <span class="n">size</span>    <span class="o">=</span> <span class="n">image</span> <span class="n">width</span><span class="o">/</span><span class="n">height</span> <span class="ow">in</span> <span class="n">pixels</span> <span class="p">(</span><span class="n">typically</span> <span class="mi">480</span><span class="o">-</span><span class="mi">800</span><span class="p">)</span>
+    <span class="o">-</span><span class="n">h</span>         <span class="o">=</span> <span class="n">show</span> <span class="n">help</span> <span class="n">message</span>
+</pre></div>
+</div>
+<p>The reader doesn’t need to know what all these words mean for a comment to be useful.
+This comment tells the reader what words they need to look up: fuzzing, blobs, and so on.</p>
+<div class="highlight-challenge notranslate"><div class="highlight"><pre><span></span>
+## Writing helpful explanatory comments
+
+**Multiple Choice**
+
+An example function `GetData` reads in data files of a particular type.
+Which of the following should be included in an explanatory comment for this function?
+
+## Options
+
+- &quot;this function reads a file&quot;
+- file name
+- file type
+- output type
+- date
+- function author
+- function version
+- data columns or other properties
+- expected file path / address (for example a specific directory or web address)
+- all of the above
+
+:::::::::::::::  solution
+
+## Solution
+
+- file type - it is good to know what the function is tailored to process
+- output type - it is good to know how to integrate a function in a workflow
+- data columns or other properties - it is good to know the internal structure of the data
+- expected file path / address (for example a specific directory or web address) - it is good to know the origin to evaluate the validity of the data
+  
+  
+
+:::::::::::::::::::::::::
+
+</pre></div>
+</div>
+</section>
+<section id="decompose-programs-into-functions">
+<h2>Decompose programs into functions<a class="headerlink" href="#decompose-programs-into-functions" title="Permalink to this heading">#</a></h2>
+<p>A function is a reusable section of
+software that can be treated as a black box by the rest of the
+program.
+This is like the way we combine actions in everyday life.
+Suppose that it is teatime.
+You could get a teabag, put the teabag in a mug,
+boil the kettle, pour the boiling water into the mug,
+wait 3 minutes for the tea to brew, remove the teabag, and add milk if desired.
+It is much easier to think of this as a single function, “make a cup of tea”.</p>
+<p>Software programming languages also allow you to combine many steps into a single function.
+The syntax for creating functions depends on programming
+language, but generally you:</p>
+<ul class="simple">
+<li><p>name the function</p></li>
+<li><p>list its input parameters</p></li>
+<li><p>describe what information it produces</p></li>
+<li><p>write some lines of code that produce the desired output.</p></li>
+</ul>
+<p>Good functions should have only one main task:
+for example, “make a cup of tea” does not also specify how to make a sandwich.
+Functions can also be built up from other functions:
+for example, “boil the kettle” involves checking if there is water in the kettle,
+filling the kettle if not, and then turning the kettle on.
+Having one main task means that functions should take no more than five or six input parameters
+and should not reference outside information.
+Functions should be no more than
+one page (about 60 lines) long: you should be able to see the entire function
+in a standard (~10pt) font on a laptop screen.
+If your function grows larger than this, it is usually best to break that up into simpler functions.</p>
+<p>The key motivation here is to fit the program into the most limited
+memory of all: ours. Human short-term memory is famously incapable
+of holding more than about seven items at once [<a class="reference external" href="https://psycnet.apa.org/record/1957-02914-001">miller1956</a>]. If we
+are to understand what our software is doing, we must break it into
+chunks that obey this limit, then create programs by combining these
+chunks. Putting code into functions also makes it easier to test and
+troubleshoot when things go wrong.</p>
+<p><a class="reference external" href="https://en.wikipedia.org/wiki/Pseudocode">Pseudocode</a> is a plain language description of code or analysis steps.
+Writing pseudocode can be useful to think through the logic of your analysis, and how to decompose it into functions.</p>
+<p>The “make a cup of tea” example above might look like this:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>    <span class="n">make_cup_of_tea</span> <span class="o">=</span> <span class="n">function</span><span class="p">(</span><span class="n">sugar</span><span class="p">,</span> <span class="n">milk</span><span class="p">)</span>
+
+        <span class="k">if</span> <span class="n">kettle</span> <span class="ow">is</span> <span class="ow">not</span> <span class="n">full</span>
+            <span class="n">fill</span> <span class="n">kettle</span>
+
+        <span class="n">boil</span> <span class="n">kettle</span>
+        <span class="n">put</span> <span class="n">teabag</span> <span class="ow">in</span> <span class="n">cup</span>
+        <span class="n">add</span> <span class="n">water</span> <span class="kn">from</span> <span class="nn">kettle</span> <span class="n">to</span> <span class="n">cup</span>
+        <span class="n">wait</span> <span class="mi">2</span> <span class="n">minutes</span>
+
+        <span class="k">if</span> <span class="n">sugar</span> <span class="ow">is</span> <span class="n">true</span>
+            <span class="n">add</span> <span class="n">sugar</span> <span class="n">to</span> <span class="n">cup</span>
+        <span class="k">if</span> <span class="n">milk</span> <span class="ow">is</span> <span class="n">true</span>
+            <span class="n">add</span> <span class="n">milk</span> <span class="n">to</span> <span class="n">cup</span>
+
+        <span class="n">stir</span> <span class="k">with</span> <span class="n">spoon</span>
+
+        <span class="k">return</span> <span class="n">cup</span>
+</pre></div>
+</div>
+<div class="highlight-challenge notranslate"><div class="highlight"><pre><span></span>
+## Using pseudocode
+
+In this scenario, you&#39;re managing fruit production on a set of islands. You have written a pseudocode function
+that tells you how to count how much fruit of a particular type is available to harvest on a given island.
+
+```source
+count_fruit_on_island = function(fruit type, island)
+    total fruit = 0
+    for every tree of fruit type on the island
+        total fruit = total fruit + number of fruit on tree
+    end for loop
+    return total fruit
+```
+
+Write the commands to call this function to count how many coconuts there are on Sam&#39;s island, how many cherries
+there are on Sam&#39;s island, and how many cherries there are on Charlie&#39;s island.
+
+Write a pseudocode for loop like the one above that uses this function to count all the cherries on every island.
+
+:::::::::::::::  solution
+
+## Solution
+
+```source
+sams coconuts = count_fruit_on_island(coconuts, Sam&#39;s island)
+sams cherries = count_fruit_on_island(cherries, Sam&#39;s island)
+charlies cherries = count_fruit_on_island(cherries, Charlie&#39;s island)
+```
+
+To count all the cherries on every island:
+
+```source
+total cherries = 0
+for every island
+    total cherries = total cherries + count_fruit_on_island(cherries, island)
+end for loop
+print &quot;There are &quot; + total cherries + &quot; cherries on all the islands&quot;
+```
+
+:::::::::::::::::::::::::
+
+</pre></div>
+</div>
+</section>
+<section id="be-ruthless-about-eliminating-duplication">
+<h2>Be ruthless about eliminating duplication<a class="headerlink" href="#be-ruthless-about-eliminating-duplication" title="Permalink to this heading">#</a></h2>
+<p>Write and re-use
+functions instead of copying and pasting code, and use data
+structures like lists instead of creating many closely-related
+variables, e.g. create <code class="docutils literal notranslate"><span class="pre">score</span> <span class="pre">=</span> <span class="pre">(1,</span> <span class="pre">2,</span> <span class="pre">3)</span></code> rather than <code class="docutils literal notranslate"><span class="pre">score1</span></code>,
+<code class="docutils literal notranslate"><span class="pre">score2</span></code>, and <code class="docutils literal notranslate"><span class="pre">score3</span></code>.</p>
+<p>Also look for well-maintained libraries that already do what you’re
+trying to do. All programming languages have libraries that you can
+import and use in your code. This is code that people have already
+written and made available for distribution that have a particular
+function. For instance, there are libraries for statistics,
+modeling, mapping and many more. Many languages catalog the
+libraries in a centralized source, for instance R has
+CRAN, Python has PyPI, and so on. So
+<em><strong>always search for well-maintained software libraries
+that do what you need</strong></em> before
+writing new code yourself, but <em><strong>test libraries before
+relying on them</strong></em>.</p>
+</section>
+<section id="give-functions-and-variables-meaningful-names">
+<h2>Give functions and variables meaningful names<a class="headerlink" href="#give-functions-and-variables-meaningful-names" title="Permalink to this heading">#</a></h2>
+<p>Meaningful names for functions and variables document their purpose and make the program generally easy to read. As a rule of thumb,
+the greater the scope of a variable, the more informative its name
+should be: while it’s acceptable to call the counter variable in a
+loop <code class="docutils literal notranslate"><span class="pre">i</span></code> or <code class="docutils literal notranslate"><span class="pre">j</span></code>, things that are re-used often, such as the major
+data structures in a program should <em>not</em> have one-letter names.</p>
+<div class="highlight-challenge notranslate"><div class="highlight"><pre><span></span>
+## Name that function
+
+An example function is defined in the format `functionName (variableName)`
+This function cubes every third number in a sequence.
+What are the most meaningful names for `functionName` and `variableName`? Choose one from each of the following sections:
+
+`functionName`
+
+1. processFunction
+2. computeCubesOfThird
+3. cubeEveryThirdNumberInASequence
+4. cubeEachThird
+5. 3rdCubed
+
+`variableName`
+
+1. arrayOfNumbersToBeCubed
+2. input
+3. numericSequence
+4. S
+
+:::::::::::::::  solution
+
+## Solution
+
+`functionName`
+
+1. processFunction - incorrect, too vague
+2. computeCubesOfThird - incorrect, doesn&#39;t imply every third in sequence
+3. cubeEveryThirdNumberInASequence - incorrect, too long
+4. **cubeEachThird - correct, short and includes information on the data and calculation performed**
+5. 3rdCubed - incorrect, bad practice to put a number at the beginning of a function name (and not allowed by some programming languages)
+
+`variableName`
+
+1. arrayOfNumbersToBeCubed - incorrect, too long
+2. input - incorrect, too vague
+3. **numericSequence - correct, short and included information about the type of input**
+4. S - incorrect, too vague
+  
+  
+
+:::::::::::::::::::::::::
+
+</pre></div>
+</div>
+<div class="highlight-callout notranslate"><div class="highlight"><pre><span></span>
+## Language style guides
+
+Remember to follow each language&#39;s conventions for names, such as
+`net_charge` for Python and `NetCharge` for Java.
+These conventions are often described in &quot;style guides&quot;,
+and can even be checked automatically.
+
+
+</pre></div>
+</div>
+<div class="highlight-callout notranslate"><div class="highlight"><pre><span></span>
+**Tab Completion**
+
+Almost all modern text editors provide *tab completion*, so that
+typing the first part of a variable name and then pressing the tab
+key inserts the completed name of the variable. Employing this
+means that meaningful longer variable names are no harder to type
+than terse abbreviations.
+
+
+</pre></div>
+</div>
+</section>
+<section id="make-dependencies-and-requirements-explicit">
+<h2>Make dependencies and requirements explicit.<a class="headerlink" href="#make-dependencies-and-requirements-explicit" title="Permalink to this heading">#</a></h2>
+<p>This is usually done on
+a per-project rather than per-program basis, i.e., by adding a file
+called something like <code class="docutils literal notranslate"><span class="pre">requirements.txt</span></code> to the root directory of
+the project, or by adding a “Getting Started” section to the
+<code class="docutils literal notranslate"><span class="pre">README</span></code> file.</p>
+</section>
+<section id="do-not-comment-and-uncomment-sections-of-code-to-control-a-program-s-behavior">
+<h2>Do not comment and uncomment sections of code to control a program’s behavior<a class="headerlink" href="#do-not-comment-and-uncomment-sections-of-code-to-control-a-program-s-behavior" title="Permalink to this heading">#</a></h2>
+<p>This is error prone and makes it difficult or impossible to
+automate analyses. Instead, put if/else statements in the program to
+control what it does, and use input arguments on the command line to select particular behaviour. For example, including the input argument <code class="docutils literal notranslate"><span class="pre">--option</span></code> and corresponding if/else statements to control running an optional piece of the program. Remember to use descriptive names for input arguments.</p>
+</section>
+<section id="provide-a-simple-example-or-test-data-set">
+<h2>Provide a simple example or test data set<a class="headerlink" href="#provide-a-simple-example-or-test-data-set" title="Permalink to this heading">#</a></h2>
+<p>Users (including
+yourself) can run your program on this set to determine whether it is working and
+whether it gives a known correct output for a simple known input.
+Such a test is particularly helpful when
+supposedly-innocent changes are being made to the program, or when
+it has to run on several different machines, e.g., the developer’s
+laptop and the department’s cluster. This type of test is called an integration test.</p>
+</section>
+<section id="code-can-be-managed-like-data">
+<h2>Code can be managed like data<a class="headerlink" href="#code-can-be-managed-like-data" title="Permalink to this heading">#</a></h2>
+<p>Your code is like your data and also needs to be managed, backed up, and shared.</p>
+<p>Your software is as much a product of your research as your papers,
+and should be as easy for people to credit.
+Submit code to a reputable DOI-issuing repository, just as you do with data.
+DOIs for software are provided by <a class="reference external" href="https://figshare.com">Figshare</a> and <a class="reference external" href="https://zenodo.org">Zenodo</a>, for example.
+Both Figshare and Zenodo integrate directly with GitHub.</p>
+<div class="highlight-callout notranslate"><div class="highlight"><pre><span></span>
+## Attribution
+
+This episode was adapted from and includes material from Wilson et al.
+[Good Enough Practices for Scientific Computing](https://github.com/swcarpentry/good-enough-practices-in-scientific-computing).
+
+
+</pre></div>
+</div>
+<div class="highlight-keypoints notranslate"><div class="highlight"><pre><span></span>
+- Any code that runs on your research data is research software
+- Write your code to be read by other people, including future you
+- Decompose your code into modules: scripts and functions, with meaningful names
+- Be explicit about requirements and dependencies such as input files, arguments and expected behaviour
+
+</pre></div>
+</div>
+</section>
+</section>
+
+    <script type="text/x-thebe-config">
+    {
+        requestKernel: true,
+        binderOptions: {
+            repo: "binder-examples/jupyter-stacks-datascience",
+            ref: "master",
+        },
+        codeMirrorConfig: {
+            theme: "abcdef",
+            mode: "python"
+        },
+        kernelOptions: {
+            name: "python3",
+            path: "./example_section"
+        },
+        predefinedOutput: true
+    }
+    </script>
+    <script>kernelName = 'python3'</script>
+
+                </article>
+              
+
+              
+              
+              
+              
+                <footer class="prev-next-footer">
+                  <!-- Previous / next buttons -->
+<div class="prev-next-area">
+</div>
+                </footer>
+              
+            </div>
+            
+            
+              
+                <div class="bd-sidebar-secondary bd-toc"><div class="sidebar-secondary-items sidebar-secondary__inner">
+
+  <div class="sidebar-secondary-item">
+  <div class="page-toc tocsection onthispage">
+    <i class="fa-solid fa-list"></i> Contents
+  </div>
+  <nav class="bd-toc-nav page-toc">
+    <ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#what-your-future-self-may-think">What your future self may think…</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#what-is-research-code-and-software">What is research code and software?</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#place-a-brief-explanatory-comment-at-the-start-of-every-script-or-program">Place a brief explanatory comment at the start of every script or program</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#decompose-programs-into-functions">Decompose programs into functions</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#be-ruthless-about-eliminating-duplication">Be ruthless about eliminating duplication</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#give-functions-and-variables-meaningful-names">Give functions and variables meaningful names</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#make-dependencies-and-requirements-explicit">Make dependencies and requirements explicit.</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#do-not-comment-and-uncomment-sections-of-code-to-control-a-program-s-behavior">Do not comment and uncomment sections of code to control a program’s behavior</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#provide-a-simple-example-or-test-data-set">Provide a simple example or test data set</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#code-can-be-managed-like-data">Code can be managed like data</a></li>
+</ul>
+  </nav></div>
+
+</div></div>
+              
+            
+          </div>
+          <footer class="bd-footer-content">
+            
+<div class="bd-footer-content__inner container">
+  
+  <div class="footer-item">
+    
+<p class="component-author">
+By University of Leeds Research Computing Team
+</p>
+
+  </div>
+  
+  <div class="footer-item">
+    
+  <p class="copyright">
+    
+      © Copyright 2023.
+      <br/>
+    
+  </p>
+
+  </div>
+  
+  <div class="footer-item">
+    
+  </div>
+  
+  <div class="footer-item">
+    
+  </div>
+  
+</div>
+          </footer>
+        
+
+      </main>
+    </div>
+  </div>
+  
+  <!-- Scripts loaded after <body> so the DOM is not blocked -->
+  <script src="../_static/scripts/bootstrap.js?digest=c5ced968eda925caa686"></script>
+<script src="../_static/scripts/pydata-sphinx-theme.js?digest=c5ced968eda925caa686"></script>
+
+  <footer class="bd-footer">
+  </footer>
+  </body>
+</html>

@@ -1,0 +1,830 @@
+
+
+<!DOCTYPE html>
+
+
+<html lang="en" >
+
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.18.1: http://docutils.sourceforge.net/" />
+
+    <title>Project Organization &#8212; Template documentation jupyter book</title>
+  
+  
+  
+  <script data-cfasync="false">
+    document.documentElement.dataset.mode = localStorage.getItem("mode") || "";
+    document.documentElement.dataset.theme = localStorage.getItem("theme") || "light";
+  </script>
+  
+  <!-- Loaded before other Sphinx assets -->
+  <link href="../_static/styles/theme.css?digest=c5ced968eda925caa686" rel="stylesheet" />
+<link href="../_static/styles/bootstrap.css?digest=c5ced968eda925caa686" rel="stylesheet" />
+<link href="../_static/styles/pydata-sphinx-theme.css?digest=c5ced968eda925caa686" rel="stylesheet" />
+
+  
+  <link href="../_static/vendor/fontawesome/6.1.2/css/all.min.css?digest=c5ced968eda925caa686" rel="stylesheet" />
+  <link rel="preload" as="font" type="font/woff2" crossorigin href="../_static/vendor/fontawesome/6.1.2/webfonts/fa-solid-900.woff2" />
+<link rel="preload" as="font" type="font/woff2" crossorigin href="../_static/vendor/fontawesome/6.1.2/webfonts/fa-brands-400.woff2" />
+<link rel="preload" as="font" type="font/woff2" crossorigin href="../_static/vendor/fontawesome/6.1.2/webfonts/fa-regular-400.woff2" />
+
+    <link rel="stylesheet" type="text/css" href="../_static/pygments.css" />
+    <link rel="stylesheet" href="../_static/styles/sphinx-book-theme.css?digest=14f4ca6b54d191a8c7657f6c759bf11a5fb86285" type="text/css" />
+    <link rel="stylesheet" type="text/css" href="../_static/togglebutton.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/copybutton.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/mystnb.4510f1fc1dee50b3e5859aac5469c37c29e427902b24a333a5f9fcb2f0b3ac41.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/sphinx-thebe.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/design-style.4045f2051d55cab465a707391d5b2007.min.css" />
+  
+  <!-- Pre-loaded scripts that we'll load fully later -->
+  <link rel="preload" as="script" href="../_static/scripts/bootstrap.js?digest=c5ced968eda925caa686" />
+<link rel="preload" as="script" href="../_static/scripts/pydata-sphinx-theme.js?digest=c5ced968eda925caa686" />
+  <script src="../_static/vendor/fontawesome/6.1.2/js/all.min.js?digest=c5ced968eda925caa686"></script>
+
+    <script data-url_root="../" id="documentation_options" src="../_static/documentation_options.js"></script>
+    <script src="../_static/jquery.js"></script>
+    <script src="../_static/underscore.js"></script>
+    <script src="../_static/_sphinx_javascript_frameworks_compat.js"></script>
+    <script src="../_static/doctools.js"></script>
+    <script src="../_static/clipboard.min.js"></script>
+    <script src="../_static/copybutton.js"></script>
+    <script src="../_static/scripts/sphinx-book-theme.js?digest=5a5c038af52cf7bc1a1ec88eea08e6366ee68824"></script>
+    <script>let toggleHintShow = 'Click to show';</script>
+    <script>let toggleHintHide = 'Click to hide';</script>
+    <script>let toggleOpenOnPrint = 'true';</script>
+    <script src="../_static/togglebutton.js"></script>
+    <script>var togglebuttonSelector = '.toggle, .admonition.dropdown';</script>
+    <script src="../_static/design-tabs.js"></script>
+    <script>const THEBE_JS_URL = "https://unpkg.com/thebe@0.8.2/lib/index.js"
+const thebe_selector = ".thebe,.cell"
+const thebe_selector_input = "pre"
+const thebe_selector_output = ".output, .cell_output"
+</script>
+    <script async="async" src="../_static/sphinx-thebe.js"></script>
+    <script>DOCUMENTATION_OPTIONS.pagename = 'example_section/05-project_organization';</script>
+    <link rel="canonical" href="https://arctraining.github.io/template-jb-docs/example_section/05-project_organization.html" />
+    <link rel="shortcut icon" href="../_static/favicon-32x32.png"/>
+    <link rel="index" title="Index" href="../genindex.html" />
+    <link rel="search" title="Search" href="../search.html" />
+  <meta name="viewport" content="width=device-width, initial-scale=1"/>
+  <meta name="docsearch:language" content="en"/>
+  </head>
+  
+  
+  <body data-bs-spy="scroll" data-bs-target=".bd-toc-nav" data-offset="180" data-bs-root-margin="0px 0px -60%" data-default-mode="">
+
+  
+  
+  <a class="skip-link" href="#main-content">Skip to main content</a>
+  
+  <div id="pst-scroll-pixel-helper"></div>
+
+  
+  <button type="button" class="btn rounded-pill" id="pst-back-to-top">
+    <i class="fa-solid fa-arrow-up"></i>
+    Back to top
+  </button>
+
+  
+  <input type="checkbox"
+          class="sidebar-toggle"
+          name="__primary"
+          id="__primary"/>
+  <label class="overlay overlay-primary" for="__primary"></label>
+  
+  <input type="checkbox"
+          class="sidebar-toggle"
+          name="__secondary"
+          id="__secondary"/>
+  <label class="overlay overlay-secondary" for="__secondary"></label>
+  
+  <div class="search-button__wrapper">
+    <div class="search-button__overlay"></div>
+    <div class="search-button__search-container">
+<form class="bd-search d-flex align-items-center"
+      action="../search.html"
+      method="get">
+  <i class="fa-solid fa-magnifying-glass"></i>
+  <input type="search"
+         class="form-control"
+         name="q"
+         id="search-input"
+         placeholder="Search this book..."
+         aria-label="Search this book..."
+         autocomplete="off"
+         autocorrect="off"
+         autocapitalize="off"
+         spellcheck="false"/>
+  <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd>K</kbd></span>
+</form></div>
+  </div>
+  
+    <nav class="bd-header navbar navbar-expand-lg bd-navbar">
+    </nav>
+  
+  <div class="bd-container">
+    <div class="bd-container__inner bd-page-width">
+      
+      <div class="bd-sidebar-primary bd-sidebar">
+        
+
+  
+  <div class="sidebar-header-items sidebar-primary__section">
+    
+    
+    
+    
+  </div>
+  
+    <div class="sidebar-primary-items__start sidebar-primary__section">
+        <div class="sidebar-primary-item">
+  
+
+<a class="navbar-brand logo" href="../welcome.html">
+  
+  
+  
+  
+  
+    
+    
+      
+    
+    
+    <img src="../_static/logo.png" class="logo__image only-light" alt="Template documentation jupyter book - Home"/>
+    <script>document.write(`<img src="../_static/logo.png" class="logo__image only-dark" alt="Template documentation jupyter book - Home"/>`);</script>
+  
+  
+</a></div>
+        <div class="sidebar-primary-item"><nav class="bd-links" id="bd-docs-nav" aria-label="Main">
+    <div class="bd-toc-item navbar-nav active">
+        
+        <ul class="nav bd-sidenav bd-sidenav__home-link">
+            <li class="toctree-l1">
+                <a class="reference internal" href="../welcome.html">
+                    Welcome
+                </a>
+            </li>
+        </ul>
+        <ul class="nav bd-sidenav">
+<li class="toctree-l1 has-children"><a class="reference internal" href="start.html">Example section</a><input class="toctree-checkbox" id="toctree-checkbox-1" name="toctree-checkbox-1" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-1"><i class="fa-solid fa-chevron-down"></i></label><ul>
+<li class="toctree-l2"><a class="reference internal" href="01-introduction.html">Introduction</a></li>
+<li class="toctree-l2"><a class="reference internal" href="02-data_management.html">Data Management</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference external" href="https://arc.leeds.ac.uk">Research Computing Website</a></li>
+</ul>
+
+    </div>
+</nav></div>
+    </div>
+  
+  
+  <div class="sidebar-primary-items__end sidebar-primary__section">
+  </div>
+  
+  <div id="rtd-footer-container"></div>
+
+
+      </div>
+      
+      <main id="main-content" class="bd-main">
+        
+        
+
+<div class="sbt-scroll-pixel-helper"></div>
+
+          <div class="bd-content">
+            <div class="bd-article-container">
+              
+              <div class="bd-header-article">
+<div class="header-article-items header-article__inner">
+  
+    <div class="header-article-items__start">
+      
+        <div class="header-article-item"><label class="sidebar-toggle primary-toggle btn btn-sm" for="__primary" title="Toggle primary sidebar" data-bs-placement="bottom" data-bs-toggle="tooltip">
+  <span class="fa-solid fa-bars"></span>
+</label></div>
+      
+    </div>
+  
+  
+    <div class="header-article-items__end">
+      
+        <div class="header-article-item">
+
+<div class="article-header-buttons">
+
+
+
+
+
+<div class="dropdown dropdown-source-buttons">
+  <button class="btn dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false" aria-label="Source repositories">
+    <i class="fab fa-github"></i>
+  </button>
+  <ul class="dropdown-menu">
+      
+      
+      
+      <li><a href="https://github.com/ARCTraining/template-jb-docs" target="_blank"
+   class="btn btn-sm btn-source-repository-button dropdown-item"
+   title="Source repository"
+   data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fab fa-github"></i>
+  </span>
+<span class="btn__text-container">Repository</span>
+</a>
+</li>
+      
+      
+      
+      
+      <li><a href="https://github.com/ARCTraining/template-jb-docs/edit/gh-pages/book/example_section/05-project_organization.md" target="_blank"
+   class="btn btn-sm btn-source-edit-button dropdown-item"
+   title="Suggest edit"
+   data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-pencil-alt"></i>
+  </span>
+<span class="btn__text-container">Suggest edit</span>
+</a>
+</li>
+      
+      
+      
+      
+      <li><a href="https://github.com/ARCTraining/template-jb-docs/issues/new?title=Issue%20on%20page%20%2Fexample_section/05-project_organization.html&body=Your%20issue%20content%20here." target="_blank"
+   class="btn btn-sm btn-source-issues-button dropdown-item"
+   title="Open an issue"
+   data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-lightbulb"></i>
+  </span>
+<span class="btn__text-container">Open issue</span>
+</a>
+</li>
+      
+  </ul>
+</div>
+
+
+
+
+
+
+<div class="dropdown dropdown-download-buttons">
+  <button class="btn dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false" aria-label="Download this page">
+    <i class="fas fa-download"></i>
+  </button>
+  <ul class="dropdown-menu">
+      
+      
+      
+      <li><a href="../_sources/example_section/05-project_organization.md" target="_blank"
+   class="btn btn-sm btn-download-source-button dropdown-item"
+   title="Download source file"
+   data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-file"></i>
+  </span>
+<span class="btn__text-container">.md</span>
+</a>
+</li>
+      
+      
+      
+      
+      <li>
+<button onclick="window.print()"
+  class="btn btn-sm btn-download-pdf-button dropdown-item"
+  title="Print to PDF"
+  data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-file-pdf"></i>
+  </span>
+<span class="btn__text-container">.pdf</span>
+</button>
+</li>
+      
+  </ul>
+</div>
+
+
+
+
+<button onclick="toggleFullScreen()"
+  class="btn btn-sm btn-fullscreen-button"
+  title="Fullscreen mode"
+  data-bs-placement="bottom" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-expand"></i>
+  </span>
+
+</button>
+
+
+<script>
+document.write(`
+  <button class="btn btn-sm navbar-btn theme-switch-button" title="light/dark" aria-label="light/dark" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <span class="theme-switch nav-link" data-mode="light"><i class="fa-solid fa-sun fa-lg"></i></span>
+    <span class="theme-switch nav-link" data-mode="dark"><i class="fa-solid fa-moon fa-lg"></i></span>
+    <span class="theme-switch nav-link" data-mode="auto"><i class="fa-solid fa-circle-half-stroke fa-lg"></i></span>
+  </button>
+`);
+</script>
+
+<script>
+document.write(`
+  <button class="btn btn-sm navbar-btn search-button search-button__button" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <i class="fa-solid fa-magnifying-glass fa-lg"></i>
+  </button>
+`);
+</script>
+<label class="sidebar-toggle secondary-toggle btn btn-sm" for="__secondary"title="Toggle secondary sidebar" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <span class="fa-solid fa-list"></span>
+</label>
+</div></div>
+      
+    </div>
+  
+</div>
+</div>
+              
+              
+
+<div id="jb-print-docs-body" class="onlyprint">
+    <h1>Project Organization</h1>
+    <!-- Table of contents -->
+    <div id="print-main-content">
+        <div id="jb-print-toc">
+            
+            <div>
+                <h2> Contents </h2>
+            </div>
+            <nav aria-label="Page">
+                <ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#put-each-project-in-its-own-directory-which-is-named-after-the-project">Put each project in its own directory, which is named after the project</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#put-text-documents-associated-with-the-project-in-the-doc-directory">Put text documents associated with the project in the <code class="docutils literal notranslate"><span class="pre">doc</span></code> directory.</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#put-raw-data-and-metadata-in-a-data-directory-and-files-generated-during-cleanup-and-analysis-in-a-results-directory">Put raw data and metadata in a <code class="docutils literal notranslate"><span class="pre">data</span></code> directory, and files generated during cleanup and analysis in a <code class="docutils literal notranslate"><span class="pre">results</span></code> directory</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#put-project-source-code-in-the-src-directory">Put project source code in the <code class="docutils literal notranslate"><span class="pre">src</span></code> directory</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#put-compiled-programs-in-the-bin-directory">Put compiled programs in the <code class="docutils literal notranslate"><span class="pre">bin</span></code> directory</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#name-all-files-to-reflect-their-content-or-function">Name all files to reflect their content or function.</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#example">Example</a></li>
+</ul>
+            </nav>
+        </div>
+    </div>
+</div>
+
+              
+                
+<div id="searchbox"></div>
+                <article class="bd-article" role="main">
+                  
+  <section class="tex2jax_ignore mathjax_ignore" id="project-organization">
+<h1>Project Organization<a class="headerlink" href="#project-organization" title="Permalink to this heading">#</a></h1>
+<div class="highlight-objectives notranslate"><div class="highlight"><pre><span></span>
+- Understand elements of good naming strategy
+- Evaluate pros and cons of different project organizations
+
+</pre></div>
+</div>
+<div class="highlight-questions notranslate"><div class="highlight"><pre><span></span>
+- How should I name my files?
+- How does folder organization help me
+
+</pre></div>
+</div>
+<p>Organizing the files that make up a project in a modular, logical, and consistent
+directory structure will help you and others keep track of them.</p>
+<div class="highlight-challenge notranslate"><div class="highlight"><pre><span></span>
+## Project organisation problems
+
+Discuss what can go wrong with project organisation:
+
+- Struggling to find the code that creates a particular figure
+- Hating to look at or even think about your project because of how badly organised it is
+
+</pre></div>
+</div>
+<div class="highlight-callout notranslate"><div class="highlight"><pre><span></span>
+## README files are magic
+
+You look at a directory (or project), you read it, and it tells you what you need to know
+
+... as long as you keep it updated!
+
+</pre></div>
+</div>
+<section id="put-each-project-in-its-own-directory-which-is-named-after-the-project">
+<h2>Put each project in its own directory, which is named after the project<a class="headerlink" href="#put-each-project-in-its-own-directory-which-is-named-after-the-project" title="Permalink to this heading">#</a></h2>
+<p>Similar to deciding
+when a chunk of code should be made a function, the ultimate goal of
+dividing research into distinct projects is to help you and others
+best understand your work. Some researchers create a separate
+project for each manuscript they are working on, while others group
+all research on a common theme, data set, or algorithm into a single
+project.</p>
+<p>As a rule of thumb, divide work into projects or modules based on the overlap
+in data and code files. If two research efforts share no data or
+code, they will probably be easiest to manage independently. If they
+share more than half of their data and code, they are probably best
+managed together, while if you are building tools that are used in
+several projects, the common code should probably be in a project of
+its own.</p>
+<p>Projects do often require their own organizational model.
+The below recommendations on how you can structure data,
+code, analysis outputs and other files, are drawn primarily
+from [<a class="reference external" href="https://journals.plos.org/ploscompbiol/article?id=10.1371/journal.pcbi.1000424">noble2009</a>, <a class="reference external" href="https://web.stanford.edu/~gentzkow/research/CodeAndData.pdf">gentzkow2014</a>]. Other structures to consider are:</p>
+<ul class="simple">
+<li><p><a class="reference external" href="https://the-turing-way.netlify.app/reproducible-research/compendia.html#basic-compendium">The Turing Way</a></p></li>
+<li><p><a class="reference external" href="https://github.com/HeidiSeibold/research-project-template">An individual researcher’s template</a></p></li>
+</ul>
+<blockquote>
+<div><p>The important concepts are that is useful to organize the project in
+modules by the types of files and that consistent planning and good
+names help you effectively find and use things later. Your lab or
+organization may have a template to use.</p>
+</div></blockquote>
+</section>
+<section id="put-text-documents-associated-with-the-project-in-the-doc-directory">
+<h2>Put text documents associated with the project in the <code class="docutils literal notranslate"><span class="pre">doc</span></code> directory.<a class="headerlink" href="#put-text-documents-associated-with-the-project-in-the-doc-directory" title="Permalink to this heading">#</a></h2>
+<p>This includes
+files for manuscripts, documentation for source code, and/or an
+electronic lab notebook recording your experiments. Subdirectories
+may be created for these different classes of files in large
+projects.</p>
+</section>
+<section id="put-raw-data-and-metadata-in-a-data-directory-and-files-generated-during-cleanup-and-analysis-in-a-results-directory">
+<h2>Put raw data and metadata in a <code class="docutils literal notranslate"><span class="pre">data</span></code> directory, and files generated during cleanup and analysis in a <code class="docutils literal notranslate"><span class="pre">results</span></code> directory<a class="headerlink" href="#put-raw-data-and-metadata-in-a-data-directory-and-files-generated-during-cleanup-and-analysis-in-a-results-directory" title="Permalink to this heading">#</a></h2>
+<p>When we refer to “generated
+files”, this includes intermediate results, such as cleaned data sets or
+simulated data, as well as final results such as figures and tables.</p>
+<p>The <code class="docutils literal notranslate"><span class="pre">results</span></code> directory will <em>usually</em> require additional
+subdirectories for all but the simplest projects. Intermediate files
+such as cleaned data, statistical tables, and final
+publication-ready figures or tables should be separated clearly by
+file naming conventions or placed into different subdirectories;
+those belonging to different papers or other publications should be
+grouped together. Similarly, the <code class="docutils literal notranslate"><span class="pre">data</span></code> directory might require
+subdirectories to organize raw data based on time, method of
+collection, or other metadata most relevant to your analysis.</p>
+</section>
+<section id="put-project-source-code-in-the-src-directory">
+<h2>Put project source code in the <code class="docutils literal notranslate"><span class="pre">src</span></code> directory<a class="headerlink" href="#put-project-source-code-in-the-src-directory" title="Permalink to this heading">#</a></h2>
+<p><code class="docutils literal notranslate"><span class="pre">src</span></code> contains all of
+the code written for the project. This includes programs written in
+interpreted languages such as R or Python; those written compiled
+languages like Fortran, C++, or Java; as well as shell scripts,
+snippets of SQL used to pull information from databases; and other
+code needed to regenerate the results.</p>
+<p>This directory may contain two conceptually distinct types of files
+that should be distinguished either by clear file names or by
+additional subdirectories. The first type are files or groups of
+files that perform the core analysis of the research, such as data
+cleaning or statistical analyses. These files can be thought of as
+the “scientific guts” of the project.</p>
+<p>The second type of file in <code class="docutils literal notranslate"><span class="pre">src</span></code> is controller or driver scripts
+that contains all the analysis steps for the entire project
+from start to finish, with particular parameters and data
+input/output commands. A controller script for a simple project, for
+example, may read a raw data table, import and apply several cleanup
+and analysis functions from the other files in this directory, and
+create and save a numeric result. For a small project with one main
+output, a single controller script should be placed in the main
+<code class="docutils literal notranslate"><span class="pre">src</span></code> directory and distinguished clearly by a name such as
+“runall”. The short example below is typical of
+scripts of this kind; note how it uses one variable, <code class="docutils literal notranslate"><span class="pre">TEMP_DIR</span></code>, to
+avoid repeating the name of a particular directory four times.</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>    TEMP_DIR = ./temp_zip_files
+
+    echo &quot;Packaging zip files required by analysis tool...&quot;
+    mkdir $(TEMP_DIR)
+    ./src/make-zip-files.py $(TEMP_DIR) *.dat
+
+    echo &quot;Analyzing...&quot;
+    ./bin/sqr_mean_analyze -i $(TEMP_DIR) -b &quot;temp&quot;
+
+    echo &quot;Cleaning up...&quot;
+    rm -rf $(TEMP_DIR)
+</pre></div>
+</div>
+</section>
+<section id="put-compiled-programs-in-the-bin-directory">
+<h2>Put compiled programs in the <code class="docutils literal notranslate"><span class="pre">bin</span></code> directory<a class="headerlink" href="#put-compiled-programs-in-the-bin-directory" title="Permalink to this heading">#</a></h2>
+<p><code class="docutils literal notranslate"><span class="pre">bin</span></code> contains
+executable programs compiled from code in the <code class="docutils literal notranslate"><span class="pre">src</span></code> directory.
+Projects that do not have any will not require <code class="docutils literal notranslate"><span class="pre">bin</span></code>.</p>
+<blockquote>
+<div><p><strong>Scripts vs. Programs</strong></p>
+<p>We use the term “script” to mean “something that is executed
+directly as-is”, and “program” to mean “something that is
+explicitly compiled before being used”. The distinction is more
+one of degree than kind—libraries written in Python are actually
+compiled to bytecode as they are loaded, for example—so one other
+way to think of it is “things that are edited directly” and
+“things that are not”.</p>
+</div></blockquote>
+<blockquote>
+<div><p><strong>External Scripts</strong></p>
+<p>If <code class="docutils literal notranslate"><span class="pre">src</span></code> is for human-readable source code, and <code class="docutils literal notranslate"><span class="pre">bin</span></code> is for
+compiled binaries, where should projects put scripts that are
+executed directly—particularly ones that are brought in from
+outside the project? On the one hand, these are written in the
+same languages as the project-specific scripts in <code class="docutils literal notranslate"><span class="pre">src</span></code>; on the
+other, they are executable, like the programs in <code class="docutils literal notranslate"><span class="pre">bin</span></code>. The answer
+is that it doesn’t matter, as long as each team’s projects follow
+the same rule. As with many of our other recommendations,
+consistency and predictability are more important than
+hair-splitting.</p>
+</div></blockquote>
+</section>
+<section id="name-all-files-to-reflect-their-content-or-function">
+<h2>Name all files to reflect their content or function.<a class="headerlink" href="#name-all-files-to-reflect-their-content-or-function" title="Permalink to this heading">#</a></h2>
+<p>For example, use names
+such as <code class="docutils literal notranslate"><span class="pre">bird_count_table.csv</span></code>, <code class="docutils literal notranslate"><span class="pre">manuscript.md</span></code>, or
+<code class="docutils literal notranslate"><span class="pre">sightings_analysis.py</span></code>. Do <em>not</em> use sequential numbers (e.g.,
+<code class="docutils literal notranslate"><span class="pre">result1.csv</span></code>, <code class="docutils literal notranslate"><span class="pre">result2.csv</span></code>) or a location in a final manuscript
+(e.g., <code class="docutils literal notranslate"><span class="pre">fig_3_a.png</span></code>), since those numbers will almost certainly
+change as the project evolves.</p>
+<blockquote>
+<div><p>File names should be:</p>
+<ul class="simple">
+<li><p>Machine readable</p></li>
+<li><p>Human readable</p></li>
+<li><p>Descriptive of their contents</p></li>
+<li><p>Optional: Consistent</p></li>
+<li><p>Optional: Play well with default ordering</p></li>
+</ul>
+</div></blockquote>
+</section>
+<section id="example">
+<h2>Example<a class="headerlink" href="#example" title="Permalink to this heading">#</a></h2>
+<p>The diagram below provides a concrete example of how a
+simple project might be organized following these recommendations:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>    <span class="o">.</span>
+    <span class="o">|--</span> <span class="n">CITATION</span>
+    <span class="o">|--</span> <span class="n">README</span>
+    <span class="o">|--</span> <span class="n">LICENSE</span>
+    <span class="o">|--</span> <span class="n">requirements</span><span class="o">.</span><span class="n">txt</span>
+    <span class="o">|--</span> <span class="n">data</span>
+    <span class="o">|</span>   <span class="o">--</span> <span class="n">birds_count_table</span><span class="o">.</span><span class="n">csv</span>
+    <span class="o">|--</span> <span class="n">doc</span>
+    <span class="o">|</span>   <span class="o">--</span> <span class="n">notebook</span><span class="o">.</span><span class="n">md</span>
+    <span class="o">|</span>   <span class="o">--</span> <span class="n">manuscript</span><span class="o">.</span><span class="n">md</span>
+    <span class="o">|</span>   <span class="o">--</span> <span class="n">changelog</span><span class="o">.</span><span class="n">txt</span>
+    <span class="o">|--</span> <span class="n">results</span>
+    <span class="o">|</span>   <span class="o">--</span> <span class="n">summarized_results</span><span class="o">.</span><span class="n">csv</span>
+    <span class="o">|--</span> <span class="n">src</span>
+    <span class="o">|</span>   <span class="o">--</span> <span class="n">sightings_analysis</span><span class="o">.</span><span class="n">py</span>
+    <span class="o">|</span>   <span class="o">--</span> <span class="n">runall</span><span class="o">.</span><span class="n">py</span>
+</pre></div>
+</div>
+<p>The root directory contains a <code class="docutils literal notranslate"><span class="pre">README</span></code> file that provides an overview of
+the project as a whole, a <code class="docutils literal notranslate"><span class="pre">CITATION</span></code> file that explains how to reference
+it, and a <code class="docutils literal notranslate"><span class="pre">LICENSE</span></code> file that states the licensing.
+The <code class="docutils literal notranslate"><span class="pre">requirements.txt</span></code> file lists the software that is required to run the data analysis.
+The <code class="docutils literal notranslate"><span class="pre">data</span></code> directory
+contains a single CSV file with tabular data on bird counts
+(machine-readable metadata could also be included here). The <code class="docutils literal notranslate"><span class="pre">src</span></code>
+directory contains <code class="docutils literal notranslate"><span class="pre">sightings_analysis.py</span></code>, a Python file containing
+functions to summarize the tabular data, and a controller script
+<code class="docutils literal notranslate"><span class="pre">runall.py</span></code> that loads the data table, applies functions imported from
+<code class="docutils literal notranslate"><span class="pre">sightings_analysis.py</span></code>, and saves a table of summarized results in the
+<code class="docutils literal notranslate"><span class="pre">results</span></code> directory.</p>
+<p>This project doesn’t have a <code class="docutils literal notranslate"><span class="pre">bin</span></code> directory, since it does not rely on
+any compiled software. The <code class="docutils literal notranslate"><span class="pre">doc</span></code> directory contains two text files
+written in Markdown, one containing a running lab notebook describing
+various ideas for the project and how these were implemented and the
+other containing a running draft of a manuscript describing the project
+findings.</p>
+<div class="highlight-challenge notranslate"><div class="highlight"><pre><span></span>
+## Naming and sorting (5 minutes)
+
+Have a look at the example files from a project, similar
+to the one from the previous metadata episode.
+
+All the files have been sorted by name and
+demonstrate consequences of different naming strategies.
+
+For your information, to encode experimental details the following conventions were taken:
+
+- phyB/phyA are sample genotypes (that is, which gene is mutated)
+- sXX is the sample number
+- LD/SD are different light conditions (long or short day)
+- on/off are different media (on sucrose, off sucrose)
+- measurement date
+- other details are timepoint and raw or normalized data
+
+```
+2020-07-14_s12_phyB_on_SD_t04.raw.csv  
+2020-07-14_s1_phyA_on_LD_t05.raw.csv  
+2020-07-14_s2_phyB_on_SD_t11.raw.csv  
+2020-08-12_s03_phyA_on_LD_t03.raw.csv  
+2020-08-12_s12_phyB_on_LD_t01.raw.csv  
+2020-08-13_s01_phyB_on_SD_t02.raw.csv  
+2020-7-12_s2_phyB_on_SD_t01.raw.csv  
+AUG-13_phyB_on_LD_s1_t11.raw.csv  
+JUL-31_phyB_on_LD_s1_t03.raw.csv  
+LD_phyA_off_t04_2020-08-12.norm.csv  
+LD_phyA_on_t04_2020-07-14.norm.csv  
+LD_phyB_off_t04_2020-08-12.norm.csv  
+LD_phyB_on_t04_2020-07-14.norm.csv  
+SD_phyB_off_t04_2020-08-13.norm.csv  
+SD_phyB_on_t04_2020-07-12.norm.csv  
+SD_phya_off_t04_2020-08-13.norm.csv  
+SD_phya_ons_t04_2020-07-12.norm.csv  
+ld_phyA_ons_t04_2020-08-12.norm.csv  
+```
+
+- What are the problems with having the date first?
+- How do different date formats behave once sorted?
+- Can you tell the importance of a leading 0 (zeros)?
+- Is it equally easy to find all data from LD conditions as ON media?
+- Can you spot the problem when using different cases (upper/lower)?
+- Do you see benefits of keeping consistent lengths of the naming conventions?
+- Do you see what happens when you mix conventions?
+
+::::::::::::::::::::::::: solution
+
+
+
+## Solution
+
+ - Using dates up front makes it difficult to quickly find data for
+   particular conditions or genotypes. It also masks the &quot;logical&quot; order of samples
+   or timepoints.
+ - Named months break the &quot;expected&quot; sorting, same as dates without leading 0
+ - Without leading zeros, &#39;s12&#39; appear before s1 and s2
+ - the first (and second) part of the name are easiest to spot
+ - the last file is also from LD conditions, but appears after SD, same with &#39;phya&#39; genotypes
+ - the last 3 file names are easiest to read as all parts appear on top of each other
+   due to the same 3 letter-length codes ons and off
+ - The lack of consistency makes it very difficult to get data from related samples/conditions.
+
+</pre></div>
+</div>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>
+<span class="p">:::::::::::::::::::::::::::::::::::::::::</span>  <span class="n">callout</span>
+
+<span class="c1">## Some helpful organisation tools</span>
+
+<span class="o">-</span> <span class="n">Integrated</span> <span class="n">Development</span> <span class="n">Environments</span> <span class="p">(</span><span class="n">IDEs</span><span class="p">)</span> <span class="n">combine</span> <span class="n">many</span> <span class="n">features</span> <span class="n">to</span> <span class="n">write</span> <span class="n">code</span> <span class="ow">and</span> <span class="n">organise</span> <span class="n">projects</span><span class="p">:</span>
+  <span class="o">-</span> <span class="p">[</span><span class="n">PyCharm</span><span class="p">](</span><span class="n">https</span><span class="p">:</span><span class="o">//</span><span class="n">www</span><span class="o">.</span><span class="n">jetbrains</span><span class="o">.</span><span class="n">com</span><span class="o">/</span><span class="n">pycharm</span><span class="o">/</span><span class="p">)</span> <span class="k">for</span> <span class="n">python</span>
+  <span class="o">-</span> <span class="p">[</span><span class="n">RStudio</span> <span class="k">for</span> <span class="n">R</span><span class="p">](</span><span class="n">https</span><span class="p">:</span><span class="o">//</span><span class="n">posit</span><span class="o">.</span><span class="n">co</span><span class="o">/</span><span class="n">products</span><span class="o">/</span><span class="nb">open</span><span class="o">-</span><span class="n">source</span><span class="o">/</span><span class="n">rstudio</span><span class="o">/</span><span class="p">)</span>
+  <span class="o">-</span> <span class="p">[</span><span class="n">VSCode</span><span class="p">](</span><span class="n">https</span><span class="p">:</span><span class="o">//</span><span class="n">code</span><span class="o">.</span><span class="n">visualstudio</span><span class="o">.</span><span class="n">com</span><span class="p">)</span> <span class="k">for</span> <span class="n">python</span> <span class="ow">and</span> <span class="n">other</span> <span class="n">languages</span><span class="p">,</span> <span class="n">etc</span><span class="o">.</span>
+<span class="o">-</span> <span class="n">Notebooks</span> <span class="n">collect</span> <span class="n">data</span><span class="p">,</span> <span class="n">code</span><span class="p">,</span> <span class="n">results</span><span class="p">,</span> <span class="n">thinking</span> <span class="ow">in</span> <span class="n">single</span> <span class="n">documents</span><span class="p">:</span>
+  <span class="o">-</span> <span class="p">[</span><span class="n">jupyter</span><span class="p">](</span><span class="n">https</span><span class="p">:</span><span class="o">//</span><span class="n">jupyter</span><span class="o">.</span><span class="n">org</span><span class="p">)</span>
+  <span class="o">-</span> <span class="p">[</span><span class="n">R</span> <span class="n">markdown</span><span class="p">](</span><span class="n">https</span><span class="p">:</span><span class="o">//</span><span class="n">rmarkdown</span><span class="o">.</span><span class="n">rstudio</span><span class="o">.</span><span class="n">com</span><span class="p">)</span>
+  <span class="o">-</span> <span class="p">[</span><span class="n">quarto</span><span class="p">](</span><span class="n">https</span><span class="p">:</span><span class="o">//</span><span class="n">quarto</span><span class="o">.</span><span class="n">org</span><span class="p">),</span> <span class="n">etc</span><span class="o">.</span>
+<span class="o">-</span> <span class="p">[</span><span class="n">Cookie</span> <span class="n">Cutter</span> <span class="n">project</span> <span class="n">templates</span> <span class="k">for</span> <span class="n">reproducible</span> <span class="n">science</span><span class="p">](</span><span class="n">https</span><span class="p">:</span><span class="o">//</span><span class="n">github</span><span class="o">.</span><span class="n">com</span><span class="o">/</span><span class="n">mkrapp</span><span class="o">/</span><span class="n">cookiecutter</span><span class="o">-</span><span class="n">reproducible</span><span class="o">-</span><span class="n">science</span><span class="p">)</span>
+
+</pre></div>
+</div>
+<div class="highlight-callout notranslate"><div class="highlight"><pre><span></span>
+## Attribution
+
+This episode was adapted from and includes material from Wilson et al.
+[Good Enough Practices for Scientific Computing](https://doi.org/10.1371/journal.pcbi.1005510).
+
+Some content was adapted from [FAIR in Biological Practice episode on files and organisation](https://carpentries-incubator.github.io/fair-bio-practice/09-files-organization/index.html). That material gives a slightly different and also useful perspective.
+
+
+</pre></div>
+</div>
+<div class="highlight-keypoints notranslate"><div class="highlight"><pre><span></span>
+- A good file name suggests the file content
+- Good project organization saves you time
+
+</pre></div>
+</div>
+</section>
+</section>
+
+    <script type="text/x-thebe-config">
+    {
+        requestKernel: true,
+        binderOptions: {
+            repo: "binder-examples/jupyter-stacks-datascience",
+            ref: "master",
+        },
+        codeMirrorConfig: {
+            theme: "abcdef",
+            mode: "python"
+        },
+        kernelOptions: {
+            name: "python3",
+            path: "./example_section"
+        },
+        predefinedOutput: true
+    }
+    </script>
+    <script>kernelName = 'python3'</script>
+
+                </article>
+              
+
+              
+              
+              
+              
+                <footer class="prev-next-footer">
+                  <!-- Previous / next buttons -->
+<div class="prev-next-area">
+</div>
+                </footer>
+              
+            </div>
+            
+            
+              
+                <div class="bd-sidebar-secondary bd-toc"><div class="sidebar-secondary-items sidebar-secondary__inner">
+
+  <div class="sidebar-secondary-item">
+  <div class="page-toc tocsection onthispage">
+    <i class="fa-solid fa-list"></i> Contents
+  </div>
+  <nav class="bd-toc-nav page-toc">
+    <ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#put-each-project-in-its-own-directory-which-is-named-after-the-project">Put each project in its own directory, which is named after the project</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#put-text-documents-associated-with-the-project-in-the-doc-directory">Put text documents associated with the project in the <code class="docutils literal notranslate"><span class="pre">doc</span></code> directory.</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#put-raw-data-and-metadata-in-a-data-directory-and-files-generated-during-cleanup-and-analysis-in-a-results-directory">Put raw data and metadata in a <code class="docutils literal notranslate"><span class="pre">data</span></code> directory, and files generated during cleanup and analysis in a <code class="docutils literal notranslate"><span class="pre">results</span></code> directory</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#put-project-source-code-in-the-src-directory">Put project source code in the <code class="docutils literal notranslate"><span class="pre">src</span></code> directory</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#put-compiled-programs-in-the-bin-directory">Put compiled programs in the <code class="docutils literal notranslate"><span class="pre">bin</span></code> directory</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#name-all-files-to-reflect-their-content-or-function">Name all files to reflect their content or function.</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#example">Example</a></li>
+</ul>
+  </nav></div>
+
+</div></div>
+              
+            
+          </div>
+          <footer class="bd-footer-content">
+            
+<div class="bd-footer-content__inner container">
+  
+  <div class="footer-item">
+    
+<p class="component-author">
+By University of Leeds Research Computing Team
+</p>
+
+  </div>
+  
+  <div class="footer-item">
+    
+  <p class="copyright">
+    
+      © Copyright 2023.
+      <br/>
+    
+  </p>
+
+  </div>
+  
+  <div class="footer-item">
+    
+  </div>
+  
+  <div class="footer-item">
+    
+  </div>
+  
+</div>
+          </footer>
+        
+
+      </main>
+    </div>
+  </div>
+  
+  <!-- Scripts loaded after <body> so the DOM is not blocked -->
+  <script src="../_static/scripts/bootstrap.js?digest=c5ced968eda925caa686"></script>
+<script src="../_static/scripts/pydata-sphinx-theme.js?digest=c5ced968eda925caa686"></script>
+
+  <footer class="bd-footer">
+  </footer>
+  </body>
+</html>
