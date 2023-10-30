@@ -109,4 +109,7 @@ Good Enough Practices rely on a shared set of principles that span these areas:
 - Shared Principles: planning, modular organisation, names, documentation
 ```
 
+### Attribution
 
+This lesson was adapted from and includes material from Wilson et al.
+[Good Enough Practices for Scientific Computing](https://github.com/swcarpentry/good-enough-practices-in-scientific-computing) and the SWC Incubator Module [Good Enough Practices in Scientific Computing](https://carpentries-lab.github.io/good-enough-practices/index.html).

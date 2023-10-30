@@ -72,19 +72,25 @@ Which of the following do you believe are good ways and bad ways of backing up y
 - My laptop
 - My workstation's hard-disk
 - Network drive
+- The `/nobackup` area on ARC3 or ARC4
 
 ```
 
 ```{admonition} Click to reveal some suggestions
 :class: dropdown
 
-- Commercial cloud service: it depends. Where are the servers located? How secure is it? How reliable is it? Do you have to pay for the service and what happens to your data if you can no longer afford it?
-- In-house cloud service: this is a good way to back up your data (usually). You have local support. It is probably compliant with funders and data security guidelines for most data sets. If you work with particularly sensitive data (for example data of patients), we suggest still discussing with IT and/or data security officers.
-- USB pen drive: definitely not! Pen-drives are prone to dying (and your data with it). It also raises data security issues and they can be easily lost.
+First of all, have a read through the [IT Guidance on Data Storage](https://it.leeds.ac.uk/it?id=kb_article&sysparm_article=KB0012276) - have any of your answers changed?
+
+- Commercial cloud service: generally for research data, it depends. Where are the servers located? How secure is it? How reliable is it? Do you have to pay for the service and what happens to your data if you can no longer afford it? Specifically for working at the University of Leeds, using an external cloud provider [requires formal approval from IT](https://it.leeds.ac.uk/it?id=kb_article&sysparm_article=KB0012276#:~:text=28.2%20No%20University%20data%20can,without%20formal%20approval%20from%20IT.)
+- In-house cloud service: this is a good way to back up your data (usually). You have local support. It is probably compliant with funders and data security guidelines for most data sets. If you work with particularly sensitive data (for example data of patients) that University of Leeds classifies as "highly confidential", you are [required to encrypt this data for storage on OneDrive/in Office 365](https://it.leeds.ac.uk/it?id=kb_article&sysparm_article=KB0012276).
+- USB pen drive: definitely not! Pen-drives are prone to dying (and your data with it). It also raises data security issues and they can be easily lost. Technically, this is allowed according the the University [policy](https://it.leeds.ac.uk/it?id=kb_article&sysparm_article=KB0012617) but only if absolutely necessary, and if encrypted if confidential or highly confidential. Treat any external USB drives as security risks, and lock in an office drawer or keep in other secure location when not in use.
 - External hard-drive: see above.
-- My laptop: it is good as a temporal storage solution for your active data. However, you should back it up appropriately.
-- My workstation's hard-disk: it is good as a temporal storage solution for your active data. However, you should back it up appropriately.
-- Network drive: this is a good way to back up your data (usually). You have local support. It is probably compliant with funders and data security guidelines.
+- My laptop: it is good as a temporal storage solution for your active data. However, you should back it up appropriately. Note: on a University-owned device, confidential and highly confidential data must be [encrypted and deleted as soon as possible](https://it.leeds.ac.uk/it?id=kb_article&sysparm_article=KB0012617). These classifications of data *can not* be stored on a personal device.
+- My workstation's hard-disk: it is good as a temporal storage solution for your active data. However, you should back it up appropriately. Again, above statements stand regarding personal machines and confidential data.
+- Network drive: this is a good way to back up your data (usually). You have local support. It is probably compliant with funders and data security guidelines - see details of M and N drives [here](https://it.leeds.ac.uk/it?id=kb_article&sysparm_article=KB0012617) and [here](https://it.leeds.ac.uk/it?id=kb_article&sysparm_article=KB0012276).
+- The `/nobackup` area on ARC3 or ARC4: please no - back up your data to a different storage area once your jobs have run. The words "no backup" are in the
+name for a reason - this area *is not backed up* and data lost from here is
+not recoverable.
 
 The guidelines above are only applicable to **unclassified** not-confidential data; please see this [Knowledge Base Article](https://it.leeds.ac.uk/it?id=kb_article&sysparm_article=KB0012617) for details of where to store confidential and highligh confidential data.
 
@@ -108,6 +114,7 @@ that case, record the exact procedure used to obtain the raw data,
 as well as any other pertinent information, such as an official
 version number or the date of download.
 
+<!-- 
 If external hard drives
 are used, store them off-site of the original location. Universities
 often have their own data storage solutions, so it is worthwhile to
@@ -119,7 +126,7 @@ reasonably priced and reliable. For large data sets, where storage
 and transfer can be expensive and time-consuming, you may need to
 use incremental backup or specialized storage systems, and people in
 your local IT group or library can often provide advice and
-assistance on options at your university or organization as well.
+assistance on options at your university or organization as well. -->
 
 ## Working with sensitive data
 
@@ -134,14 +141,30 @@ These laws vary between countries and may affect whether you can share informati
 
 ## Create the data you wish to see in the world
 
-:::::::::::::::::::::::::::::::::::::::  challenge
+```{admonition} Challenge
 
-## Discussion (2 minutes)
+Consider the following questions, and discuss with other researchers
+in your office if possible:
 
-Which file formats do you store your data in? Enter your answers in the collaborative document.
+- Which file formats do you store your data in? What file formats do
+your research peers store their data in?
+- Is there a specific file format frequently used in your research area
+(for example, a `shape` file in GIS-related applications)?
+- Are there any specific limitations or disadvantages to some file types 
+you are familiar with or use?
+- Are these file formats closed and proprietary, or open and non-proprietary?
 
 
-::::::::::::::::::::::::::::::::::::::::::::::::::
+```
+
+Here's some general guidance towards good practises with file formats, filenames,
+and variable names (such as column headers) within those files:
+
+*File formats*: Convert data from closed, proprietary formats to
+open, non-proprietary formats that ensure machine readability across
+time and computing setups [[UIllinois](https://www.library.illinois.edu/rds/file-formats/)]. Good options include CSV for
+tabular data, JSON, YAML, or XML for non-tabular data such as
+graphs, and HDF5 for certain kinds of structured data.
 
 *Filenames*: Store especially useful metadata as part of the
 filename itself, while keeping the filename regular enough for easy
@@ -157,13 +180,8 @@ recode the treatment variable from `1` vs. `2` to `untreated` vs.
 "-99", with `NA`, a code used in most programming languages to
 indicate that data is "Not Available" [[white2013](https://ojs.library.queensu.ca/index.php/IEE/article/view/4608)].
 
-*File formats*: Convert data from closed, proprietary formats to
-open, non-proprietary formats that ensure machine readability across
-time and computing setups [[UIllinois](https://www.library.illinois.edu/rds/file-formats/)]. Good options include CSV for
-tabular data, JSON, YAML, or XML for non-tabular data such as
-graphs, and HDF5 for certain kinds of structured data.
 
-Create the dataset you *wish* you had received. The goal here is to improve machine and
+In general, create the dataset you *wish* you had received. The goal here is to improve machine and
 human readability, but *not* to do vigorous data filtering or add
 external information. Machine readability allows automatic
 processing using computer programs, which is important when others
@@ -177,15 +195,22 @@ transformations that we recommend at the beginning of analysis:
 
 ## Create analysis-friendly data
 
-:::::::::::::::::::::::::::::::::::::::  challenge
+```{admonition} Challenge
 
-## Discussion (2 minutes)
+Which of the table layouts is analysis friendly?
 
-Which of the table layouts is analysis friendly? Discuss. Enter your answers in the collaborative document.
-![](fig/wilson-tidy-data.png){alt="Two tables of data appear side-by-side. The table on the left has columns named site, 1999, and 2000. The table on the right has columns named site, year, and cases."}
+![](fig/wilson-tidy-data.png)
 
+*Alt text: Two tables of data appear side-by-side. The table on the left has columns named site, 1999, and 2000. The table on the right has columns named site, year, and cases.*
 
-::::::::::::::::::::::::::::::::::::::::::::::::::
+```
+
+```{admonition} Click to reveal some suggestions
+:class: dropdown
+
+The table on the right can be described as "tidy" data and in general will
+be easier to work with; see the discussion of tidy data below.
+```
 
 Analysis can be much easier
 if you are working with so-called "tidy" data
@@ -230,14 +255,11 @@ not the complete *why*. For example, choosing a region of interest
 in an image is inherently interactive, but you can save the region
 chosen as a set of boundary coordinates.
 
-:::::::::::::::::::::::::::::::::::::::::  callout
-
-## How, when and why do you document?
+```{admonition} How, when and why do you document?
+:class: tip
 
 As much as possible, always and to help you future self.
-
-
-::::::::::::::::::::::::::::::::::::::::::::::::::
+```
 
 ## Use multiple tables as necessary, and use a unique identifier for every record
 
@@ -255,9 +277,7 @@ when variables in two datasets refer to the same thing.
 
 ## Submit data to a reputable DOI-issuing repository so that others can access and cite it
 
-:::::::::::::::::::::::::::::::::::::::  challenge
-
-## Sharing your data with the world (5 minutes)
+```{admonition} Challenge
 
 Which of the following places would be good places to share your data?
 
@@ -265,19 +285,24 @@ Which of the following places would be good places to share your data?
 - GitHub
 - General repo (i.e.: Zenodo, Data Dryad, etc.)
 - Community specific repo (i.e.: ArrayExpress, SRA, EGA, PRIDE, etc.)
+- University repository ([Research Data Leeds](https://library.leeds.ac.uk/info/14062/research-data-management/67/deposit-in-research-data-leeds))
 
-:::::::::::::::  solution
+```
 
-## Solution
+```{admonition} Click to reveal some suggestions
+:class: dropdown
 
 - Personal/lab web-site: this is not the best place to store your data long-term. These websites are not hosted long term. You can have a link to the repo, though.
-- GitHub: in itself it is not proper for sharing your data as it can be modified. However, a snapshot of a Github repository can be stored in Zenodo and be issued a DOI.
+- GitHub: in itself it is not proper for sharing your data as it can be modified. However, a snapshot of a Github repository can be stored in Zenodo and be issued a DOI. See [here](https://docs.github.com/en/repositories/releasing-projects-on-github/about-releases) to learn about releases. Make sure to cite your code's release version in any paper where it is used.
 - General repo (i.e.: Zenodo, Data Dryad, etc.): good option to deposit data that does not fit in a specific repository. Best if the service is non-commerical, has long-termdata archival and issues DOIs, such as Zenodo.
-- Community specific repo (i.e.: ArrayExpress, SRA, EGA, PRIDE, etc.): best option to share your data, if your research community has come up with a sustainable long-term repository.
+- Community specific repo (i.e.: ArrayExpress, SRA, EGA, PRIDE, etc.): these can be a good option to share your data, if your research community has come up with a sustainable long-term repository.
+- Research Data Leeds repository: you should deposit your data here if your research is funded by any of the UK Research Councils, Wellcome Trust, CRUK or Horizon 2020, and they have not specified another repository.
 
-:::::::::::::::::::::::::
 
-::::::::::::::::::::::::::::::::::::::::::::::::::
+Please read through the guidelines provided by the [Library](https://library.leeds.ac.uk/info/14062/research-data-management/66/sharing-data/4) regarding choosing a repository.
+
+Note that your funder may (and probably does) have specific requirements regarding where data should be stored - you can check on the [Sherpa database](https://www.sherpa.ac.uk/juliet/) for your funders requirements. For more information, you can contact the LIbrary research team for advice at [researchdataenquiries@leeds.ac.uk](mailto:researchdataenquiries@leeds.ac.uk).
+```
 
 Your data is as much a product of your research as the papers you write, and just as likely to be useful to others (if not more so).
 Sites such as [Dryad](https://datadryad.org) and [Zenodo](https://zenodo.org) allow others to find your work, use it, and cite it; we discuss licensing in the episode on collaboration [04-collaboration].
@@ -286,26 +311,25 @@ Note that there are two types of metadata: metadata about the dataset as a whole
 If the audience is humans, write the metadata (the README file) for humans.
 If the audience includes automatic metadata harvesters, fill out the formal metadata and write a good README file for the humans [[wickes2015](https://github.com/swcarpentry/good-enough-practices-in-scientific-computing/issues/3#issuecomment-157410442)].
 
-:::::::::::::::::::::::::::::::::::::::::  callout
+Read through the [Sharing Data](https://library.leeds.ac.uk/info/14062/research-data-management/66/sharing-data) section on the Library website before you continue on.
 
-## What is a DOI?
+```{admonition} What is a DOI?
+:class: tip
 
 - A digital object identifier is a persistent identifier or handle used to identify objects uniquely.
 - Data with a persistent DOI can be found even when your lab website dies.
 - doi-issuing repositories include: zenodo, figshare, dryad.
+```
 
-::::::::::::::::::::::::::::::::::::::::::::::::::
-
-:::::::::::::::::::::::::::::::::::::::::  callout
-
-## Places to share Data, with DOIs
+```{admonition} Places to share Data, with DOIs
+:class: note
 
 - FigShare ([http://figshare.com](https://figshare.com)): A repository where users can make all of their research outputs available in a citable, shareable, and discoverable manner. Note that figshare is commercial.
 - Zenodo ([http://zenodo.org](https://zenodo.org)): A repository service that enables researchers, scientists, projects, and institutions to share and showcase multidisciplinary research results (data and publications)
 - Dryad ([http://datadryad.org](https://datadryad.org)): A repository that aims to make data archiving as simple and as rewarding as possible through a suite of services not necessarily provided by publishers or institutional websites.
 - Dataverse ([http://thedata.org](https://thedata.org)): A repository for research data that takes care of long-term preservation and good archival practices, while researchers can share, keep control of, and get recognition for their data.
-
-::::::::::::::::::::::::::::::::::::::::::::::::::
+- Research Data Leeds ([https://archive.researchdata.leeds.ac.uk](https://archive.researchdata.leeds.ac.uk/)): the institutional research data repository for the University of Leeds. The service aims to facilitate data discovery and data sharing.
+```
 
 ## Data management plans
 
@@ -318,39 +342,35 @@ Many funders provide basic templates for writing a DMP, along with guidelines on
 - Information on how data can be accessed, shared and re-used
 - Information on how data will be stored and managed, including long-term storage and maintenance after your project is complete
 
-:::::::::::::::::::::::::::::::::::::::  challenge
+The Library website provides guidance on [Data Management Planning](https://library.leeds.ac.uk/info/14062/research-data-management/62/data-management-planning) including links to specific funder requirements; they also provide a basic [Word template](https://library.leeds.ac.uk/downloads/download/80/basic_data_management_plan_template). If you are a PGR, you may need to include a data management plan in GRAD; discuss this with your supervisor.
 
-## Discussion (2 minutes)
+```{admonition} Challenge
 
 Aside from being a requirement, there are many benefits of writing a DMP to researchers. What sort of benefits do you think there are? Enter your answers in the collaborative document.
+```
 
-:::::::::::::::  solution
-
-## Solution
+```{admonition} Click to reveal some suggestions
+:class: dropdown
 
 - Find and understand data easily
 - Allows continuity of work when colleagues leave or join the lab
 - It helps you consider issues about your data before they arise and come up with solutions
+```
 
-:::::::::::::::::::::::::
-
-::::::::::::::::::::::::::::::::::::::::::::::::::
 
 Writing your first data management plan can be a daunting task but your future self will thank you in the end.
 It's best to speak to other members of your lab about any existing lab group or grant data management plans.
 If your lab group doesn't have a data management plan, it may be helpful to work on it together to identify any major considerations.
-Often research institutions provide support for DMPs, e.g. through library services or a data steward.
+
 
 More resources on data management plans are available at [DMP online](https://dmponline.dcc.ac.uk).
 
-::::::::::::::::::::::::::::::::::::::  discussion
 
 ## What's your next step in data management?
 
 - Which recommendations above are most helpful for your current project? What could you try this week?
 - Does your next project have a data management plan? Could you draft one?
 
-::::::::::::::::::::::::::::::::::::::::::::::::::
 
 ## Summary
 
@@ -365,15 +385,12 @@ Breaking a lengthy analysis workflow into modular parts makes it easier to under
 
 Modifying and sharing your data analysis is only possible if you still have the raw data: **back up your data!!!**
 
-:::::::::::::::::::::::::::::::::::::::::  callout
 
 ## Attribution
 
 This episode was adapted from and includes material from Wilson et al.
 [Good Enough Practices for Scientific Computing](https://github.com/swcarpentry/good-enough-practices-in-scientific-computing).
 
-
-::::::::::::::::::::::::::::::::::::::::::::::::::
 
 
 `````{admonition} Key reading before you continue
@@ -395,7 +412,8 @@ For more information, please discuss research data storage with your supervisor 
 `````
 
 
-:::::::::::::::::::::::::::::::::::::::: keypoints
+```{admonition} Key points
+:class: tip
 
 - Raw data is the data as originally generated -- it should be kept read-only
 - Raw data has to be backed up in more than one location
@@ -404,6 +422,6 @@ For more information, please discuss research data storage with your supervisor 
 - The Digital object identifiers (DOIs) is a unique identifier that permanently identifies data and makes it findable
 - Finding a repository tailored to your data is key to making it findable and accessible by the broader community
 
-::::::::::::::::::::::::::::::::::::::::::::::::::
+```
 
 
