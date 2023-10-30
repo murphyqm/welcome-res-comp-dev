@@ -1,8 +1,5 @@
----
-title: Code and Software
-teaching: 20
-exercises: 20
----
+# Code and Software
+
 
 ::::::::::::::::::::::::::::::::::::::: objectives
 

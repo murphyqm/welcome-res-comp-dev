@@ -1,8 +1,5 @@
----
-title: Introduction
-teaching: 5
-exercises: 10
----
+# Introduction
+
 
 ::::::::::::::::::::::::::::::::::::::: objectives
 

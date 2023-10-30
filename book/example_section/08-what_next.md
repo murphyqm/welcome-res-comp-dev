@@ -1,8 +1,5 @@
----
-title: What To Do Next
-teaching: 10
-exercises: 0
----
+# What To Do Next
+
 
 ::::::::::::::::::::::::::::::::::::::: objectives
 

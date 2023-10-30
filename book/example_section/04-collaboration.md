@@ -1,8 +1,5 @@
----
-title: Collaboration
-teaching: 12
-exercises: 25
----
+# Collaboration
+
 
 ::::::::::::::::::::::::::::::::::::::: objectives
 

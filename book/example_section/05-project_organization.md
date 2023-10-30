@@ -1,8 +1,5 @@
----
-title: Project Organization
-teaching: 15
-exercises: 10
----
+# Project Organization
+
 
 ::::::::::::::::::::::::::::::::::::::: objectives
 

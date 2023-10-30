@@ -1,8 +1,5 @@
----
-title: Manuscripts
-teaching: 10
-exercises: 10
----
+# Manuscripts
+
 
 ::::::::::::::::::::::::::::::::::::::: objectives
 

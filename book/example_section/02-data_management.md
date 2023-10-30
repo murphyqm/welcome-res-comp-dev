@@ -1,8 +1,5 @@
----
-title: Data Management
-teaching: 12
-exercises: 20
----
+# Data Management
+
 
 ::::::::::::::::::::::::::::::::::::::: objectives
 

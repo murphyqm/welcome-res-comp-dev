@@ -1,8 +1,5 @@
----
-title: Keeping Track of Changes
-teaching: 15
-exercises: 25
----
+# Keeping Track of Changes
+
 
 ::::::::::::::::::::::::::::::::::::::: objectives
 
