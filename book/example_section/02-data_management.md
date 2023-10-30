@@ -1,7 +1,8 @@
 # Data Management
 
-
-::::::::::::::::::::::::::::::::::::::: objectives
+```{admonition} Objectives
+:class: note
+By the end of this section, you should be able to:
 
 - Identify problems with data management practices
 - Understand what raw data is
@@ -11,15 +12,15 @@
 - Understand the importance of documenting your process
 - Understand what a DOI is and its usefulness
 
-::::::::::::::::::::::::::::::::::::::::::::::::::
-
-:::::::::::::::::::::::::::::::::::::::: questions
+Also, you should be able to answer these questions:
 
 - What is data management?
 - What data should I back up, and how?
 - How can I share my data effectively?
 
-::::::::::::::::::::::::::::::::::::::::::::::::::
+```
+
+This section contains an introduction to research data management principles. At the end of this section, we link to some key articles and policies from the University of Leeds regarding specific data management, storage and retention policies. It is very important that you read and adhere to these, and the specific data policies required by your funder. This introduction is intended to highlight the reasoning behind these policies, and to make them more digestible, not as a stand in for reading and following them!
 
 ## Data management
 
@@ -27,15 +28,17 @@ Data within a project may need to exist in various forms, ranging from what firs
 Data management is the process of storing, documenting, organizing, and sharing the data created and collected during a project.
 Our recommendations have two main themes. One is to work towards ready-to-analyze data incrementally, documenting both the intermediate data and the process. We also describe the key features of "tidy data", which can be a powerful accelerator for analysis [[wickham2014](https://www.jstatsoft.org/article/view/v059i10), [hart2016](https://journals.plos.org/ploscompbiol/article?id=10.1371/journal.pcbi.1005097)].
 
-:::::::::::::::::::::::::::::::::::::::  challenge
 
-## Data management problems (5 minutes)
+```{admonition} Challenge
 
-In your opinion, what can go wrong when you have poor data management? Write down 2 issues in the collaborative document.
+Think through the prompt below, and if possible discuss with some of your research peers!
 
-:::::::::::::::  solution
+In your opinion, what can go wrong when you have poor data management?
 
-## Solution
+```
+
+```{admonition} Click to reveal some suggestions
+:class: dropdown
 
 - Data loss
 - Data corruption, making data unusable
@@ -43,32 +46,37 @@ In your opinion, what can go wrong when you have poor data management? Write dow
 - Confusion: what does this data mean? where does it come from? what is its purpose?
 - Versioning issues: Which version of the data made this figure? Which version of the analysis script was used for the manuscript?
 
-:::::::::::::::::::::::::
+```
 
-::::::::::::::::::::::::::::::::::::::::::::::::::
 
-![Source: PHD Comics. ["Four stages of data loss"](https://phdcomics.com/comics/archive.php/images/archive.php?comicid=382)](fig/ew-data-loss.png){alt="A comic strip titled 'The four stages of data loss' and subtitled 'dealing with accidental deletion of months of hard-earned data' by PhD Comics. It's based on the common theory of five stages of grief. The first panel is labelled 'stage 1: denial' and shows a man sitting behind a computer. A thought bubble above his head reads 'I did not just erase all my data. I surely made a back-up somewhere'. The second panel is labelled 'stage 2: anger' and shows the man shaking his computer. A speech bubble above his head shows he is shouting 'you stupid piece of crap! Where's my data?!'. The third panel is labelled 'stage 3: depression'. It shows the man crying, the broken computer beside him. He thinks 'Why? Why me?'. The fourth and final panel is labelled 'stage 4: acceptance'. It shows the man coming to terms with what has happened. He says 'I'm never going to graduate'."}
+```{figure} fig/ew-data-loss.png
+---
+name: data-comic-fig
+---
+Source: PHD Comics. ["Four stages of data loss"](https://phdcomics.com/comics/archive.php/images/archive.php?comicid=382) *Alt text: A comic strip titled 'The four stages of data loss' and subtitled 'dealing with accidental deletion of months of hard-earned data' by PhD Comics. It's based on the common theory of five stages of grief. The first panel is labelled 'stage 1: denial' and shows a man sitting behind a computer. A thought bubble above his head reads 'I did not just erase all my data. I surely made a back-up somewhere'. The second panel is labelled 'stage 2: anger' and shows the man shaking his computer. A speech bubble above his head shows he is shouting 'you stupid piece of crap! Where's my data?!'. The third panel is labelled 'stage 3: depression'. It shows the man crying, the broken computer beside him. He thinks 'Why? Why me?'. The fourth and final panel is labelled 'stage 4: acceptance'. It shows the man coming to terms with what has happened. He says 'I'm never going to graduate'.*
+```
 
 
 ## Save the raw data
 
-:::::::::::::::::::::::::::::::::::::::  challenge
+Before we go any further, lets think about the first step. Where do you save your data?
 
-## Backing up your data (5 minutes)
+```{admonition} Challenge
 
 Which of the following do you believe are good ways and bad ways of backing up your data?
 
-- Commercial cloud service
-- In-house cloud service (operates similarly to a commercial cloud service but with servers and infrastructure maintained by your organization)
+- Commercial cloud service, such as Google Drive
+- In-house cloud service (operates similarly to a commercial cloud service but with servers and infrastructure maintained by your organization), e.g. OneDrive with your University of Leeds account
 - USB pen-drive
 - External hard-drive
 - My laptop
 - My workstation's hard-disk
 - Network drive
 
-:::::::::::::::  solution
+```
 
-## Solution
+```{admonition} Click to reveal some suggestions
+:class: dropdown
 
 - Commercial cloud service: it depends. Where are the servers located? How secure is it? How reliable is it? Do you have to pay for the service and what happens to your data if you can no longer afford it?
 - In-house cloud service: this is a good way to back up your data (usually). You have local support. It is probably compliant with funders and data security guidelines for most data sets. If you work with particularly sensitive data (for example data of patients), we suggest still discussing with IT and/or data security officers.
@@ -77,12 +85,11 @@ Which of the following do you believe are good ways and bad ways of backing up y
 - My laptop: it is good as a temporal storage solution for your active data. However, you should back it up appropriately.
 - My workstation's hard-disk: it is good as a temporal storage solution for your active data. However, you should back it up appropriately.
 - Network drive: this is a good way to back up your data (usually). You have local support. It is probably compliant with funders and data security guidelines.
-  
-  
 
-:::::::::::::::::::::::::
+The guidelines above are only applicable to **unclassified** not-confidential data; please see this [Knowledge Base Article](https://it.leeds.ac.uk/it?id=kb_article&sysparm_article=KB0012617) for details of where to store confidential and highligh confidential data.
 
-::::::::::::::::::::::::::::::::::::::::::::::::::
+```
+
 
 Backing up your data is essential, otherwise it is a question of when (not if) you lose it.
 
@@ -368,6 +375,24 @@ This episode was adapted from and includes material from Wilson et al.
 
 ::::::::::::::::::::::::::::::::::::::::::::::::::
 
+
+`````{admonition} Key reading before you continue
+:class: important
+ While this section has highlighted and explained some general concepts
+ that are important to data management, it's important to be fully informed
+ of the specific policies you must follow, both as a researcher associated
+ with the University of Leeds, and as a researcher supported by your funding body.
+
+ Here is a (non-comprehensive) selection of some useful articles to read through and bookmark before continuing:
+
+ - The [University research data policy](https://library.leeds.ac.uk/info/14062/research_data_management/68/research_data_management_policy) lays out the University's framework for data management
+ - The Library's documentation on [research data management](https://library.leeds.ac.uk/info/14062/research-data-management/61/research-data-management-explained) discusses data management for a wide range of disciplines
+ - The Library has also collated the most common [funding body requirements](https://library.leeds.ac.uk/info/14062/research_data_management/69/funder_requirements)
+
+
+For more information, please discuss research data storage with your supervisor or PI, or contact the [Research data management team](https://library.leeds.ac.uk/info/1800/contact_us/161/contact_the_library#accordion1661257732339) at the Library. Additionally, your funding body (or local DTP/CDT lead) will be able to provide guidance on adhering to policy regarding data storage and sharing.
+
+`````
 
 
 :::::::::::::::::::::::::::::::::::::::: keypoints
