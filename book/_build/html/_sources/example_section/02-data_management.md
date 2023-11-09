@@ -386,12 +386,6 @@ Breaking a lengthy analysis workflow into modular parts makes it easier to under
 Modifying and sharing your data analysis is only possible if you still have the raw data: **back up your data!!!**
 
 
-## Attribution
-
-This episode was adapted from and includes material from Wilson et al.
-[Good Enough Practices for Scientific Computing](https://github.com/swcarpentry/good-enough-practices-in-scientific-computing).
-
-
 
 `````{admonition} Key reading before you continue
 :class: important
@@ -423,5 +417,10 @@ For more information, please discuss research data storage with your supervisor 
 - Finding a repository tailored to your data is key to making it findable and accessible by the broader community
 
 ```
+
+### Attribution
+
+This lesson was adapted from and includes material from Wilson et al.
+[Good Enough Practices for Scientific Computing](https://github.com/swcarpentry/good-enough-practices-in-scientific-computing) and the SWC Incubator Module [Good Enough Practices in Scientific Computing](https://carpentries-lab.github.io/good-enough-practices/index.html).
 
 
