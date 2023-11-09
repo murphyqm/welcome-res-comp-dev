@@ -6,9 +6,11 @@ root: welcome
 
 # ===== Getting started ==========================================
 sections:
-- file: example_section/start
+- file: research-computing-101/start
+  title: Research Computing 101
   sections:
-    - file: example_section/01-introduction.md
-    - file: example_section/02-data_management.md
+    - file: research-computing-101/01-introduction.md
+    - file: research-computing-101/02-data_management.md
+    - file: research-computing-101/03-software.md
 - url: https://arc.leeds.ac.uk
   title: Research Computing Website
