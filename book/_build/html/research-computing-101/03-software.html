@@ -9,7 +9,7 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.18.1: http://docutils.sourceforge.net/" />
 
-    <title>Code and Software &#8212; Template documentation jupyter book</title>
+    <title>Research Software and Code &#8212; Template documentation jupyter book</title>
   
   
   
@@ -172,7 +172,9 @@ const thebe_selector_output = ".output, .cell_output"
 <li class="toctree-l1 current active has-children"><a class="reference internal" href="start.html">Research Computing 101</a><input checked="" class="toctree-checkbox" id="toctree-checkbox-1" name="toctree-checkbox-1" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-1"><i class="fa-solid fa-chevron-down"></i></label><ul class="current">
 <li class="toctree-l2"><a class="reference internal" href="01-introduction.html">Introduction</a></li>
 <li class="toctree-l2"><a class="reference internal" href="02-data_management.html">Data Management</a></li>
-<li class="toctree-l2 current active"><a class="current reference internal" href="#">Code and Software</a></li>
+<li class="toctree-l2 current active"><a class="current reference internal" href="#">Research Software and Code</a></li>
+
+
 </ul>
 </li>
 <li class="toctree-l1"><a class="reference external" href="https://arc.leeds.ac.uk">Research Computing Website</a></li>
@@ -376,7 +378,7 @@ document.write(`
               
 
 <div id="jb-print-docs-body" class="onlyprint">
-    <h1>Code and Software</h1>
+    <h1>Research Software and Code</h1>
     <!-- Table of contents -->
     <div id="print-main-content">
         <div id="jb-print-toc">
@@ -386,8 +388,12 @@ document.write(`
             </div>
             <nav aria-label="Page">
                 <ul class="visible nav section-nav flex-column">
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#what-your-future-self-may-think">What your future self may think…</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#what-is-research-code-and-software">What is research code and software?</a></li>
+<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#">Research Software and Code</a><ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#what-is-research-software">What is research software?</a></li>
+</ul>
+</li>
+<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#part-1-pre-built-software">Part 1: Pre-built Software</a></li>
+<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#part-2-code">Part 2: Code</a><ul class="visible nav section-nav flex-column">
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#place-a-brief-explanatory-comment-at-the-start-of-every-script-or-program">Place a brief explanatory comment at the start of every script or program</a></li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#decompose-programs-into-functions">Decompose programs into functions</a></li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#be-ruthless-about-eliminating-duplication">Be ruthless about eliminating duplication</a></li>
@@ -400,6 +406,9 @@ document.write(`
 </ul>
 </li>
 </ul>
+</li>
+</ul>
+
             </nav>
         </div>
     </div>
@@ -410,40 +419,49 @@ document.write(`
 <div id="searchbox"></div>
                 <article class="bd-article" role="main">
                   
-  <section class="tex2jax_ignore mathjax_ignore" id="code-and-software">
-<h1>Code and Software<a class="headerlink" href="#code-and-software" title="Permalink to this heading">#</a></h1>
-<div class="highlight-objectives notranslate"><div class="highlight"><pre><span></span>
-- Describe what is research software and its purposes
-- Decompose a workflow into identifiable components
-- Know when to separate a script into several functions
-- Write code that is easy to run by others by including all dependencies, requirements, documentation, and examples
-
-</pre></div>
-</div>
-<div class="highlight-questions notranslate"><div class="highlight"><pre><span></span>
-- What is research code and software?
-- What can you do to make code usable and reusable?
-- What are the characteristics of readable code?
-
-</pre></div>
-</div>
-<section id="what-your-future-self-may-think">
-<h2>What your future self may think…<a class="headerlink" href="#what-your-future-self-may-think" title="Permalink to this heading">#</a></h2>
-<p><img alt="" src="../_images/ew-software-twit.png" />{alt=”A tweet from Neil Ferguson, posted on March 22nd 2020. It reads ‘I’m conscious that lots of people would like to see and run the pandemic simulation code we are using to model control measures against COVID-19. To explain the background — I wrote the code (thousands of lines on undocumented C) 13 plus years ago to model flu pandemics…’”}</p>
-<p>The <a class="reference external" href="https://twitter.com/neil_ferguson/status/1241835454707699713">twitter thread illustrates a real example of research software problems</a>,
-from <a class="reference external" href="https://en.wikipedia.org/wiki/Neil_Ferguson_(epidemiologist)">Prof. Neil Ferguson</a>.
-In that case,  the research software written for one purpose was suddenly in high demand, for important public health reasons, over a decade later.
-And that software was hard for others to use.</p>
-<p>Smaller-scale versions of this problem are more common:</p>
+  <section class="tex2jax_ignore mathjax_ignore" id="research-software-and-code">
+<h1>Research Software and Code<a class="headerlink" href="#research-software-and-code" title="Permalink to this heading">#</a></h1>
+<div class="note admonition">
+<p class="admonition-title">Objectives</p>
+<p>By the end of this section, you should be able to:</p>
 <ul class="simple">
-<li><p>you want to re-run a data analysis that you did six months ago</p></li>
-<li><p>a new post-doc starts working on a related project and needs to adapt your analysis to a new dataset</p></li>
-<li><p>you publish a paper, and a masters student from the other side of the world emails you to reproduce the results for their project</p></li>
+<li><p>Describe what is research software and its purposes</p></li>
+<li><p>Decompose a workflow into identifiable components</p></li>
+<li><p>Know when to separate a script into several functions</p></li>
+<li><p>Write code that is easy to run by others by including all dependencies, requirements, documentation, and examples</p></li>
 </ul>
-</section>
-<section id="what-is-research-code-and-software">
-<h2>What is research code and software?<a class="headerlink" href="#what-is-research-code-and-software" title="Permalink to this heading">#</a></h2>
-<p>There are many different shapes and sizes of research software:</p>
+<p>Also, you should be able to answer these questions:</p>
+<ul class="simple">
+<li><p>What is research code and software?</p></li>
+<li><p>What can you do to make code usable and reusable?</p></li>
+<li><p>What are the characteristics of readable code?</p></li>
+</ul>
+</div>
+<p>This chapter is split up into two sections: the first deals more generally with research software and best practices, while the second section is a little more specific and delves into code that you might use to conduct your research. If you’re not currently using any coding in your project, and don’t foresee yourself using it in the future, it is still useful to very quickly skim-read the coding section; you can always return to it in more depth in the future if your research does end up ambling down a code-related avenue!</p>
+<p>Note: this section diverges significantly from the SWC Incubator Module <a class="reference external" href="https://carpentries-lab.github.io/good-enough-practices/index.html">Good Enough Practices in Scientific Computing</a> with more focus on the use of proprietary research software in addition to code and scripts.</p>
+<section id="what-is-research-software">
+<h2>What is research software?<a class="headerlink" href="#what-is-research-software" title="Permalink to this heading">#</a></h2>
+<p>There are many different shapes and sizes of research software. Some of these tools are proprietary (where you pay for a license), some are free, some are open-source (meaning their source-code is freely available); some tools have a graphic user interface and are operated by point-and-click; some require coding or scripting.</p>
+<p>Here are a few examples of research software/software that is used in research:</p>
+<ul class="simple">
+<li><p>ArcGIS and QGIS</p></li>
+<li><p>Adobe Photoshop</p></li>
+<li><p>AutoCAD</p></li>
+<li><p>Comsol</p></li>
+<li><p>Excel</p></li>
+<li><p>Fiji ImageJ</p></li>
+<li><p>Google Earth Pro</p></li>
+<li><p>Jamovi</p></li>
+<li><p>MATLAB</p></li>
+<li><p>MohrPlotter</p></li>
+<li><p>OriginPro</p></li>
+<li><p>Paraview</p></li>
+<li><p>R and RStudio</p></li>
+<li><p>Stata</p></li>
+<li><p>Sibelius</p></li>
+</ul>
+<p><em>Note this list is not intended as an endorsement of any of the above softwares; in fact, we’ll see in a minute how some of these might not be suited to research use.</em> All applications available through the University of Leeds are listed on the <a class="reference external" href="https://it.leeds.ac.uk/it?id=nr_software_a_z">Software A-Z</a> page. Some software is available to download via <a class="reference external" href="https://appsanywhere.leeds.ac.uk/login">AppsAnywhere</a>, and others can be run on <a class="reference external" href="https://arcdocs.leeds.ac.uk/software/start.html">ARC3 and ARC4</a>.</p>
+<p>If you use coding in your research, then your research software might also include:</p>
 <ul class="simple">
 <li><p>Any code that runs in order to process your research data.</p></li>
 <li><p>A record of all the steps used to process your data (scripts and workflow such data analysis are software).</p></li>
@@ -451,6 +469,73 @@ And that software was hard for others to use.</p>
 <li><p>Standalone programs or scripts that do particular research tasks are also research software.</p></li>
 </ul>
 <p>There are extended discussions about research software at the <a class="reference external" href="https://www.software.ac.uk/about">Software Sustainability Institute</a>.</p>
+<div class="admonition-challenge admonition">
+<p class="admonition-title">Challenge</p>
+<p>What research software do you use? Do other researchers and peers use this software too?</p>
+<ul class="simple">
+<li><p>Is it easy to find instructions and documentation for how to use the software?</p></li>
+<li><p>What are some common issues and pitfalls of this software?</p></li>
+<li><p>Does the software always behave in the way you would expect?</p></li>
+<li><p>How do you interact with the software? Is it through point and click or by writing scripts?</p></li>
+<li><p>How do you record the actions you took within the software?</p></li>
+</ul>
+</div>
+<p>So why do we need to think about research computing practises when using research software? For some researchers, developing statistical analyses with software, or building a model with code, might be a key component of their work. For many others the use of software is viewed as a quick means-to-an-end that lets them do the “real” research. While it’s absolutely fair that the software you use to analyse your data may not be the focus of your research, it’s important to remember that it is still an important step in your research process, and should be considered with as much rigour as the data collection, collation, analysis and interpretation stages of your study.</p>
+<figure class="align-default" id="software-tweet">
+<img alt="../_images/ew-software-twit.png" src="../_images/ew-software-twit.png" />
+<figcaption>
+<p><span class="caption-number">Fig. 3 </span><span class="caption-text">Some problems can arise when methods, software use or code is not well documented or maintained. <em>Alt text: A tweet from Neil Ferguson, posted on March 22nd 2020. It reads ‘I’m conscious that lots of people would like to see and run the pandemic simulation code we are using to model control measures against COVID-19. To explain the background — I wrote the code (thousands of lines on undocumented C) 13 plus years ago to model flu pandemics…’</em></span><a class="headerlink" href="#software-tweet" title="Permalink to this image">#</a></p>
+</figcaption>
+</figure>
+<p>The <a class="reference external" href="https://twitter.com/neil_ferguson/status/1241835454707699713">twitter thread illustrates a real example of research software problems</a>,
+from <a class="reference external" href="https://en.wikipedia.org/wiki/Neil_Ferguson_(epidemiologist)">Prof. Neil Ferguson</a>.
+In that case, the research software written for one purpose was suddenly in high demand, for important public health reasons, over a decade later.
+And that software was hard for others to use.</p>
+<p>While this might at first seem like a problem only researchers writing their own code face,
+smaller-scale versions of this problem are very common, even when using pre-built software and not writing code:</p>
+<ul class="simple">
+<li><p>You want to re-run a data analysis that you did six months ago but cannot remember the steps you took to process an image in Fiji/ImageJ</p></li>
+<li><p>A new post-doc starts working on a related project and needs to adapt your analysis to a new dataset; you used ArcGIS and exported some beautiful maps, but no longer have the source files and cannot remember your method</p></li>
+<li><p>You publish a paper, and a masters student from the other side of the world emails you to reproduce the results for their project, but the software you used has multiple versions available with slightly different behaviours</p></li>
+</ul>
+<p>All the above situation assume that the initial use of the software and analysis of the data was executed as planned, and that recreating it is the issue; however, as highlighted in the introduction, that is not always the case. Commonly used software can cause issues when it is used outside of it’s intended purpose, for example Microsoft Excel creating issues when used in a research setting: one fifth of published genomics papers with Excel supplementary tables contain erroneous gene-names due to incorrect <a class="reference external" href="https://doi.org/10.1186/s13059-016-1044-7">cell-conversions applied by the spreadsheet software</a>. Similarly, the incorrect use of Excel as a database management system by Public Health England during the Covid-19 pandemic led to the deletion of nearly 16,000 coronavirus test results were lost, due to the <a class="reference external" href="https://www.bbc.co.uk/news/technology-54423988">maximum row limit of the XLS file format</a>.</p>
+<p>If you write a paper and make a mistake in your analysis, ideally the entire step-by-step process should be documented and reproducible by the paper reviewers so that they can catch it before it goes to publication; failing this, having your workflow and raw data avaiable to the public means that an enthusiastic reader of your paper can point out the issue before it propagates into other published work.</p>
+<p>We will talk through some of the steps you can take to make sure your workflow is robust, both to help yourself in the future, as well as helping any researchers in your field who want to use and build your work!</p>
+</section>
+</section>
+<section class="tex2jax_ignore mathjax_ignore" id="part-1-pre-built-software">
+<h1>Part 1: Pre-built Software<a class="headerlink" href="#part-1-pre-built-software" title="Permalink to this heading">#</a></h1>
+<p>Here are some basic guidelines to help you use research software in a responsible, reproducible way. First, let’s think about the problems that might arise before we try to fend these off!</p>
+<div class="dropdown admonition">
+<p class="admonition-title">What are some potential problems when using software in research?</p>
+<ul class="simple">
+<li><p>I don’t remember what steps I took to analyse the data</p></li>
+<li><p>I don’t remember why I made this choice</p></li>
+<li><p>The software has been updated and no longer returns the same results</p></li>
+<li><p>This software doesn’t work on an updated version of my dataset</p></li>
+<li><p>This software doesn’t work on a different computing system</p></li>
+<li><p>I’m not sure if the end-result is correct and I cannot manage to reproduce it</p></li>
+</ul>
+<p>Have you any examples from your own research?</p>
+</div>
+<p>Most problems pertaining to use of research software can be distilled into one of two overarching issues:</p>
+<ul class="simple">
+<li><p>not recording each step taken when analysing the code</p></li>
+<li><p>not preserving metadata (software versions, dataset versions) and raw datafiles</p></li>
+</ul>
+<p>The aim of good practise in using research software is so that people (including you in the future) can reproduce the same results in order to compare, assess, build on, or improve them.</p>
+<div class="tip admonition">
+<p class="admonition-title">Good practise for use of research software</p>
+<ol class="arabic simple">
+<li><p>Record the version of the software you are using. This will help you down the line, but also enables you to accurately <a class="reference external" href="https://ardc.edu.au/resource/citing-software/">cite the software that you use</a> when you report or publish your results.</p></li>
+<li><p>Save and publish your raw data (as discussed in the previous section) without your analysis applied.</p></li>
+<li><p>If your software is point-and-click controlled, investigate whether it is possible to record and export your analyses, actions or clicks automatically. If not, take detailed notes on each step of your analysis, including any default settings etc. Record enough information so that you could havnd your “recipe” and raw data to a stranger and they could reproduce the same end result. You can include this recipe in the supplementary information of your publication, alongside the raw data.</p></li>
+<li><p>Predict the output of your analyses, and check that the software returns similar - and if not, investigate why. Were your assumptions wrong, or has the software analysed your data differently to how you expected?</p></li>
+</ol>
+</div>
+</section>
+<section class="tex2jax_ignore mathjax_ignore" id="part-2-code">
+<h1>Part 2: Code<a class="headerlink" href="#part-2-code" title="Permalink to this heading">#</a></h1>
 <div class="highlight-challenge notranslate"><div class="highlight"><pre><span></span>
 ## Potential problems writing code
 
@@ -494,7 +579,6 @@ and this section focuses on practices that best
 balance ease of use with benefit for you and collaborators.</p>
 <p>Programs themselves are modular, and can be written in scripts that run
 a clearly-defined set of functions on defined inputs.</p>
-</section>
 <section id="place-a-brief-explanatory-comment-at-the-start-of-every-script-or-program">
 <h2>Place a brief explanatory comment at the start of every script or program<a class="headerlink" href="#place-a-brief-explanatory-comment-at-the-start-of-every-script-or-program" title="Permalink to this heading">#</a></h2>
 <p>Short is fine; always include at least one example of how
@@ -869,8 +953,12 @@ This episode was adapted from and includes material from Wilson et al.
   </div>
   <nav class="bd-toc-nav page-toc">
     <ul class="visible nav section-nav flex-column">
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#what-your-future-self-may-think">What your future self may think…</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#what-is-research-code-and-software">What is research code and software?</a></li>
+<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#">Research Software and Code</a><ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#what-is-research-software">What is research software?</a></li>
+</ul>
+</li>
+<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#part-1-pre-built-software">Part 1: Pre-built Software</a></li>
+<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#part-2-code">Part 2: Code</a><ul class="visible nav section-nav flex-column">
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#place-a-brief-explanatory-comment-at-the-start-of-every-script-or-program">Place a brief explanatory comment at the start of every script or program</a></li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#decompose-programs-into-functions">Decompose programs into functions</a></li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#be-ruthless-about-eliminating-duplication">Be ruthless about eliminating duplication</a></li>
@@ -883,6 +971,9 @@ This episode was adapted from and includes material from Wilson et al.
 </ul>
 </li>
 </ul>
+</li>
+</ul>
+
   </nav></div>
 
 </div></div>

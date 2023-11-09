@@ -1,41 +1,50 @@
-# Code and Software
+# Research Software and Code
 
-
-::::::::::::::::::::::::::::::::::::::: objectives
-
+```{admonition} Objectives
+:class: note
+By the end of this section, you should be able to:
 - Describe what is research software and its purposes
 - Decompose a workflow into identifiable components
 - Know when to separate a script into several functions
 - Write code that is easy to run by others by including all dependencies, requirements, documentation, and examples
 
-::::::::::::::::::::::::::::::::::::::::::::::::::
-
-:::::::::::::::::::::::::::::::::::::::: questions
-
+Also, you should be able to answer these questions:
 - What is research code and software?
 - What can you do to make code usable and reusable?
 - What are the characteristics of readable code?
 
-::::::::::::::::::::::::::::::::::::::::::::::::::
+```
 
-## What your future self may think...
+This chapter is split up into two sections: the first deals more generally with research software and best practices, while the second section is a little more specific and delves into code that you might use to conduct your research. If you're not currently using any coding in your project, and don't foresee yourself using it in the future, it is still useful to very quickly skim-read the coding section; you can always return to it in more depth in the future if your research does end up ambling down a code-related avenue!
 
-![](fig/ew-software-twit.png){alt="A tweet from Neil Ferguson, posted on March 22nd 2020. It reads 'I'm conscious that lots of people would like to see and run the pandemic simulation code we are using to model control measures against COVID-19. To explain the background — I wrote the code (thousands of lines on undocumented C) 13 plus years ago to model flu pandemics…'"}
+Note: this section diverges significantly from the SWC Incubator Module [Good Enough Practices in Scientific Computing](https://carpentries-lab.github.io/good-enough-practices/index.html) with more focus on the use of proprietary research software in addition to code and scripts.
 
-The [twitter thread illustrates a real example of research software problems](https://twitter.com/neil_ferguson/status/1241835454707699713),
-from [Prof. Neil Ferguson](https://en.wikipedia.org/wiki/Neil_Ferguson_\(epidemiologist\)).
-In that case,  the research software written for one purpose was suddenly in high demand, for important public health reasons, over a decade later.
-And that software was hard for others to use.
+## What is research software?
 
-Smaller-scale versions of this problem are more common:
+There are many different shapes and sizes of research software. Some of these tools are proprietary (where you pay for a license), some are free, some are open-source (meaning their source-code is freely available); some tools have a graphic user interface and are operated by point-and-click; some require coding or scripting.
 
-- you want to re-run a data analysis that you did six months ago
-- a new post-doc starts working on a related project and needs to adapt your analysis to a new dataset
-- you publish a paper, and a masters student from the other side of the world emails you to reproduce the results for their project
+Here are a few examples of research software/software that is used in research:
 
-## What is research code and software?
+- ArcGIS and QGIS
+- Adobe Photoshop
+- AutoCAD
+- Comsol
+- Excel
+- Fiji ImageJ
+- Google Earth Pro
+- Jamovi
+- MATLAB
+- MohrPlotter
+- OriginPro
+- Paraview
+- R and RStudio
+- Stata
+- Sibelius
 
-There are many different shapes and sizes of research software:
+*Note this list is not intended as an endorsement of any of the above softwares; in fact, we'll see in a minute how some of these might not be suited to research use.* All applications available through the University of Leeds are listed on the [Software A-Z](https://it.leeds.ac.uk/it?id=nr_software_a_z) page. Some software is available to download via [AppsAnywhere](https://appsanywhere.leeds.ac.uk/login), and others can be run on [ARC3 and ARC4](https://arcdocs.leeds.ac.uk/software/start.html).
+
+
+If you use coding in your research, then your research software might also include:
 
 - Any code that runs in order to process your research data.
 - A record of all the steps used to process your data (scripts and workflow such data analysis are software).
@@ -43,6 +52,84 @@ There are many different shapes and sizes of research software:
 - Standalone programs or scripts that do particular research tasks are also research software.
 
 There are extended discussions about research software at the [Software Sustainability Institute](https://www.software.ac.uk/about).
+
+```{admonition} Challenge
+
+What research software do you use? Do other researchers and peers use this software too?
+
+- Is it easy to find instructions and documentation for how to use the software?
+- What are some common issues and pitfalls of this software?
+- Does the software always behave in the way you would expect?
+- How do you interact with the software? Is it through point and click or by writing scripts?
+- How do you record the actions you took within the software?
+
+```
+
+So why do we need to think about research computing practises when using research software? For some researchers, developing statistical analyses with software, or building a model with code, might be a key component of their work. For many others the use of software is viewed as a quick means-to-an-end that lets them do the "real" research. While it's absolutely fair that the software you use to analyse your data may not be the focus of your research, it's important to remember that it is still an important step in your research process, and should be considered with as much rigour as the data collection, collation, analysis and interpretation stages of your study.
+
+```{figure} fig/ew-software-twit.png
+---
+name: software-tweet
+---
+Some problems can arise when methods, software use or code is not well documented or maintained. *Alt text: A tweet from Neil Ferguson, posted on March 22nd 2020. It reads 'I'm conscious that lots of people would like to see and run the pandemic simulation code we are using to model control measures against COVID-19. To explain the background — I wrote the code (thousands of lines on undocumented C) 13 plus years ago to model flu pandemics…'*
+```
+
+The [twitter thread illustrates a real example of research software problems](https://twitter.com/neil_ferguson/status/1241835454707699713),
+from [Prof. Neil Ferguson](https://en.wikipedia.org/wiki/Neil_Ferguson_\(epidemiologist\)).
+In that case, the research software written for one purpose was suddenly in high demand, for important public health reasons, over a decade later.
+And that software was hard for others to use.
+
+While this might at first seem like a problem only researchers writing their own code face, 
+smaller-scale versions of this problem are very common, even when using pre-built software and not writing code:
+
+- You want to re-run a data analysis that you did six months ago but cannot remember the steps you took to process an image in Fiji/ImageJ
+- A new post-doc starts working on a related project and needs to adapt your analysis to a new dataset; you used ArcGIS and exported some beautiful maps, but no longer have the source files and cannot remember your method
+- You publish a paper, and a masters student from the other side of the world emails you to reproduce the results for their project, but the software you used has multiple versions available with slightly different behaviours
+
+All the above situation assume that the initial use of the software and analysis of the data was executed as planned, and that recreating it is the issue; however, as highlighted in the introduction, that is not always the case. Commonly used software can cause issues when it is used outside of it's intended purpose, for example Microsoft Excel creating issues when used in a research setting: one fifth of published genomics papers with Excel supplementary tables contain erroneous gene-names due to incorrect [cell-conversions applied by the spreadsheet software](https://doi.org/10.1186/s13059-016-1044-7). Similarly, the incorrect use of Excel as a database management system by Public Health England during the Covid-19 pandemic led to the deletion of nearly 16,000 coronavirus test results were lost, due to the [maximum row limit of the XLS file format](https://www.bbc.co.uk/news/technology-54423988).
+
+If you write a paper and make a mistake in your analysis, ideally the entire step-by-step process should be documented and reproducible by the paper reviewers so that they can catch it before it goes to publication; failing this, having your workflow and raw data avaiable to the public means that an enthusiastic reader of your paper can point out the issue before it propagates into other published work.
+
+We will talk through some of the steps you can take to make sure your workflow is robust, both to help yourself in the future, as well as helping any researchers in your field who want to use and build your work!
+
+# Part 1: Pre-built Software
+
+Here are some basic guidelines to help you use research software in a responsible, reproducible way. First, let's think about the problems that might arise before we try to fend these off!
+
+```{admonition} What are some potential problems when using software in research?
+:class: dropdown
+
+- I don't remember what steps I took to analyse the data
+- I don't remember why I made this choice
+- The software has been updated and no longer returns the same results
+- This software doesn't work on an updated version of my dataset
+- This software doesn't work on a different computing system
+- I'm not sure if the end-result is correct and I cannot manage to reproduce it
+
+Have you any examples from your own research? 
+
+```
+
+Most problems pertaining to use of research software can be distilled into one of two overarching issues:
+- not recording each step taken when analysing the code
+- not preserving metadata (software versions, dataset versions) and raw datafiles
+
+The aim of good practise in using research software is so that people (including you in the future) can reproduce the same results in order to compare, assess, build on, or improve them.
+
+
+```{admonition} Good practise for use of research software
+:class: tip
+
+1. Record the version of the software you are using. This will help you down the line, but also enables you to accurately [cite the software that you use](https://ardc.edu.au/resource/citing-software/) when you report or publish your results.
+2. Save and publish your raw data (as discussed in the previous section) without your analysis applied.
+3. If your software is point-and-click controlled, investigate whether it is possible to record and export your analyses, actions or clicks automatically. If not, take detailed notes on each step of your analysis, including any default settings etc. Record enough information so that you could havnd your "recipe" and raw data to a stranger and they could reproduce the same end result. You can include this recipe in the supplementary information of your publication, alongside the raw data.
+4. Predict the output of your analyses, and check that the software returns similar - and if not, investigate why. Were your assumptions wrong, or has the software analysed your data differently to how you expected?
+
+```
+
+
+# Part 2: Code
+
 
 :::::::::::::::::::::::::::::::::::::::  challenge
 
